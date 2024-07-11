@@ -97,7 +97,7 @@
   };
 
   # dont logout on idle
-  services.logind.extraConfig = "IdleAction=ignore";
+  services.xserver.displayManager.gdm.autoSuspend = false;
 
   # remove gnome bloatware
   environment.gnome.excludePackages = (with pkgs; [
