@@ -96,6 +96,10 @@
     ];
   };
 
+  # dont logout on idle
+  services.logind.extraConfig = "IdleAction=ignore";
+
+  # remove gnome bloatware
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
