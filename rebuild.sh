@@ -10,3 +10,4 @@ git add configuration.nix
 git commit -am "$gen"
 git push
 popd
+exit

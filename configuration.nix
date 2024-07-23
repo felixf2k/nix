@@ -89,6 +89,7 @@
       spotify
       obsidian
       edgedb
+      gimp
     ];
   };
 
