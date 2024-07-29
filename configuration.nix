@@ -79,7 +79,7 @@
   users.users.felix = {
     isNormalUser = true;
     description = "Felix Fischerkeller";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker"];
     packages = with pkgs; [
       thunderbird
       chromium
@@ -90,8 +90,12 @@
       obsidian
       edgedb
       gimp
+      docker-compose
     ];
   };
+
+  # enable docker
+  virtualisation.docker.enable = true;
 
   # dont logout on idle
   services.xserver.displayManager.gdm.autoSuspend = false;
