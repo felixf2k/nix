@@ -85,6 +85,7 @@
       chromium
       vscode
       nodejs
+      bun
       keepassxc
       spotify
       obsidian
