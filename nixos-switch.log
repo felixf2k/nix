@@ -2,18 +2,42 @@ building Nix...
 building the system configuration...
 trace: warning: The option `services.xserver.xkbVariant' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
 trace: warning: The option `services.xserver.layout' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
-these 3 derivations will be built:
-  /nix/store/af15pdha7vxr6r28pqjdcwm8sb2bw9v8-user-environment.drv
-  /nix/store/gkgwqchg22wrqw3imbksd6xdwwphcjkb-etc.drv
-  /nix/store/s5x4vgw57wrcvnal21sx7sksgwdzmw4y-nixos-system-nixos-24.05.3523.a633d89c6dc9.drv
-this path will be fetched (22.08 MiB download, 92.87 MiB unpacked):
-  /nix/store/w5wfi1pd06gn9wjd7fwijd2i49hc7scn-bun-1.1.8
-copying path '/nix/store/w5wfi1pd06gn9wjd7fwijd2i49hc7scn-bun-1.1.8' from 'https://cache.nixos.org'...
-building '/nix/store/af15pdha7vxr6r28pqjdcwm8sb2bw9v8-user-environment.drv'...
-created 220 symlinks in user environment
+these 5 derivations will be built:
+  /nix/store/jgwl58is32vnjqm66d8ln5v6xjlh0lbc-microsoft-edge-stable_126.0.2592.102-1_amd64.deb.drv
+  /nix/store/lbxx33dbz7ypwq3f96dp0zy6xz5jwf88-microsoft-edge-stable-126.0.2592.102.drv
+  /nix/store/w2v3hw908a1gd0lgynb74vl5srprzzpc-user-environment.drv
+  /nix/store/pz1667agrllvn4bkq6lcdxn099di3abc-etc.drv
+  /nix/store/vm707yragyj8b917q3vlrjwa6zc8whxy-nixos-system-nixos-24.05.3523.a633d89c6dc9.drv
+building '/nix/store/jgwl58is32vnjqm66d8ln5v6xjlh0lbc-microsoft-edge-stable_126.0.2592.102-1_amd64.deb.drv'...
+
+trying https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_126.0.2592.102-1_amd64.deb
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  160M  100  160M    0     0  17.3M      0  0:00:09  0:00:09 --:--:-- 18.8M
+building '/nix/store/lbxx33dbz7ypwq3f96dp0zy6xz5jwf88-microsoft-edge-stable-126.0.2592.102.drv'...
+Running phase: unpackPhase
+unpacking source archive /nix/store/pbq7wb34xavp3jbdc6rbp3k4bdpix4qs-microsoft-edge-stable_126.0.2592.102-1_amd64.deb
+source root is .
+setting SOURCE_DATE_EPOCH to timestamp 1720642118 of file ./usr/share/doc/microsoft-edge-stable/changelog.gz
+Running phase: updateAutotoolsGnuConfigScriptsPhase
+Running phase: buildPhase
+Running phase: installPhase
+substituteStream() in derivation microsoft-edge-stable-126.0.2592.102: WARNING: '--replace' is deprecated, use --replace-{fail,warn,quiet}. (file '/nix/store/p73ycj3bjlmrj120adh0193wa8jhl3i8-microsoft-edge-stable-126.0.2592.102/share/applications/microsoft-edge.desktop')
+Running phase: fixupPhase
+checking for references to /build/ in /nix/store/p73ycj3bjlmrj120adh0193wa8jhl3i8-microsoft-edge-stable-126.0.2592.102...
+gzipping man pages under /nix/store/p73ycj3bjlmrj120adh0193wa8jhl3i8-microsoft-edge-stable-126.0.2592.102/share/man/
+patching script interpreter paths in /nix/store/p73ycj3bjlmrj120adh0193wa8jhl3i8-microsoft-edge-stable-126.0.2592.102
+/nix/store/p73ycj3bjlmrj120adh0193wa8jhl3i8-microsoft-edge-stable-126.0.2592.102/opt/microsoft/msedge/xdg-mime: interpreter directive changed from "#!/bin/sh" to "/nix/store/5jw69mbaj5dg4l2bj58acg3gxywfszpj-bash-5.2p26/bin/sh"
+/nix/store/p73ycj3bjlmrj120adh0193wa8jhl3i8-microsoft-edge-stable-126.0.2592.102/opt/microsoft/msedge/xdg-settings: interpreter directive changed from "#!/bin/sh" to "/nix/store/5jw69mbaj5dg4l2bj58acg3gxywfszpj-bash-5.2p26/bin/sh"
+/nix/store/p73ycj3bjlmrj120adh0193wa8jhl3i8-microsoft-edge-stable-126.0.2592.102/opt/microsoft/msedge/microsoft-edge: interpreter directive changed from "#!/bin/bash" to "/nix/store/5jw69mbaj5dg4l2bj58acg3gxywfszpj-bash-5.2p26/bin/bash"
+stripping (with command strip and flags -S -p) in  /nix/store/p73ycj3bjlmrj120adh0193wa8jhl3i8-microsoft-edge-stable-126.0.2592.102/bin
+rewriting symlink /nix/store/p73ycj3bjlmrj120adh0193wa8jhl3i8-microsoft-edge-stable-126.0.2592.102/bin/.microsoft-edge-wrapped to be relative to /nix/store/p73ycj3bjlmrj120adh0193wa8jhl3i8-microsoft-edge-stable-126.0.2592.102
+rewriting symlink /nix/store/p73ycj3bjlmrj120adh0193wa8jhl3i8-microsoft-edge-stable-126.0.2592.102/bin/microsoft-edge-stable to be relative to /nix/store/p73ycj3bjlmrj120adh0193wa8jhl3i8-microsoft-edge-stable-126.0.2592.102
+building '/nix/store/w2v3hw908a1gd0lgynb74vl5srprzzpc-user-environment.drv'...
+created 236 symlinks in user environment
 gtk-update-icon-cache: Cache file created successfully.
-building '/nix/store/gkgwqchg22wrqw3imbksd6xdwwphcjkb-etc.drv'...
-building '/nix/store/s5x4vgw57wrcvnal21sx7sksgwdzmw4y-nixos-system-nixos-24.05.3523.a633d89c6dc9.drv'...
+building '/nix/store/pz1667agrllvn4bkq6lcdxn099di3abc-etc.drv'...
+building '/nix/store/vm707yragyj8b917q3vlrjwa6zc8whxy-nixos-system-nixos-24.05.3523.a633d89c6dc9.drv'...
 activating the configuration...
 setting up /etc...
 reloading user units for felix...

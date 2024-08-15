@@ -83,6 +83,7 @@
     packages = with pkgs; [
       thunderbird
       chromium
+      microsoft-edge
       vscode
       nodejs
       bun
