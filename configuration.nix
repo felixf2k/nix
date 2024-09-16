@@ -93,6 +93,7 @@
       edgedb
       gimp
       docker-compose
+      unzip
     ];
   };
 
