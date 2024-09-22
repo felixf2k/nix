@@ -92,6 +92,7 @@
       edgedb
       gimp
       docker-compose
+      vscode
     ];
   };
 
