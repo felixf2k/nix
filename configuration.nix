@@ -84,7 +84,6 @@
       thunderbird
       chromium
       microsoft-edge
-      vscode
       nodejs
       bun
       keepassxc
@@ -93,7 +92,6 @@
       edgedb
       gimp
       docker-compose
-      unzip
     ];
   };
 
