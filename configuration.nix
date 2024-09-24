@@ -93,6 +93,7 @@
       gimp
       docker-compose
       vscode
+      lens
     ];
   };
 
