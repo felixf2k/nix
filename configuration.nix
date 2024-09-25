@@ -84,7 +84,9 @@
       thunderbird
       chromium
       microsoft-edge
+      nodejs
       bun
+      unzip
       keepassxc
       spotify
       obsidian
