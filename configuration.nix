@@ -84,7 +84,6 @@
       thunderbird
       chromium
       microsoft-edge
-      nodejs
       bun
       keepassxc
       spotify
