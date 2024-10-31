@@ -100,6 +100,7 @@
       lens
       microsoft-edge
       unzip
+      7z
     ];
   };
 
