@@ -99,6 +99,7 @@
       vscode
       lens
       microsoft-edge
+      unzip
     ];
   };
 
