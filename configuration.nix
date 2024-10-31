@@ -99,8 +99,7 @@
       vscode
       lens
       microsoft-edge
-      unzip
-      7z
+      deno
     ];
   };
 
