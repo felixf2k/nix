@@ -98,6 +98,7 @@
       docker-compose
       vscode
       lens
+      cypress
       microsoft-edge
     ];
   };
