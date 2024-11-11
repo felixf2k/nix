@@ -100,6 +100,8 @@
       lens
       cypress
       microsoft-edge
+      cargo
+      rustc
     ];
   };
 
