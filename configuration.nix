@@ -138,6 +138,7 @@
         rust-lang.rust-analyzer
       ];
     })
+    rust-analyzer
   # wget
   ];
 
