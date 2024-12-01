@@ -89,20 +89,13 @@
       chromium
       microsoft-edge
       nodejs
-      bun
       keepassxc
       spotify
-      obsidian
-      edgedb
       gimp
       docker-compose
       vscode
       lens
-      cypress
       microsoft-edge
-      cargo
-      rustc
-      python311
     ];
   };
 
