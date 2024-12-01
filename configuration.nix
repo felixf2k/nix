@@ -97,8 +97,10 @@
       lens
       microsoft-edge
       (vscode-with-extensions.override {
-    vscodeExtensions = with vscode-extensions; [
-      rust-analyzer
+        vscodeExtensions = with vscode-extensions; [
+          rust-analyzer
+        ]
+      }
     ];
   };
 
