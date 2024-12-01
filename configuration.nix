@@ -139,6 +139,7 @@
       ];
     })
     rust-analyzer
+    cargo
   # wget
   ];
 
