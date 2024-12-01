@@ -96,14 +96,7 @@
       vscode
       lens
       microsoft-edge
-      (vscode-with-extensions.override {
-        vscodeExtensions = with vscode-extensions; [
-          rust-lang.rust-analyzer
-          ms-python.python
-          ms-azuretools.vscode-docker
-          ms-vscode-remote.remote-ssh
-        ]
-      })
+      vscode-extensions.matklad.rust-analyzer
     ];
   };
 
