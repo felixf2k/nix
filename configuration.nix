@@ -96,7 +96,7 @@
       vscode
       lens
       microsoft-edge
-      vscode-extensions.matklad.rust-analyzer
+      vscode-extensions.rust-analyzer
     ];
   };
 

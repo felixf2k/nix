@@ -1,21 +1,8 @@
 building Nix...
-/nix/store/kdr8ignyi9k7dvb5hyrpbp4mzqrwfaxz-nixos-rebuild/bin/nixos-rebuild: line 594: /nix/var/nix/profiles/per-user/root/channels/nixos/.version-suffix: Read-only file system
 building the system configuration...
-trace: evaluation warning: The ‘gnome.cheese’ was moved to top-level. Please use ‘pkgs.cheese’ directly.
-trace: evaluation warning: The ‘gnome.gnome-music’ was moved to top-level. Please use ‘pkgs.gnome-music’ directly.
-trace: evaluation warning: The ‘gnome.epiphany’ was moved to top-level. Please use ‘pkgs.epiphany’ directly.
-trace: evaluation warning: The ‘gnome.geary’ was moved to top-level. Please use ‘pkgs.geary’ directly.
-trace: evaluation warning: The ‘gnome.evince’ was moved to top-level. Please use ‘pkgs.evince’ directly.
-trace: evaluation warning: The ‘gnome.gnome-characters’ was moved to top-level. Please use ‘pkgs.gnome-characters’ directly.
-trace: evaluation warning: The ‘gnome.tali’ was moved to top-level. Please use ‘pkgs.tali’ directly.
-trace: evaluation warning: The ‘gnome.iagno’ was moved to top-level. Please use ‘pkgs.iagno’ directly.
-trace: evaluation warning: The ‘gnome.hitori’ was moved to top-level. Please use ‘pkgs.hitori’ directly.
-trace: evaluation warning: The ‘gnome.atomix’ was moved to top-level. Please use ‘pkgs.atomix’ directly.
-trace: evaluation warning: The option `services.xserver.xkbVariant' defined in `/etc/nixos/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
-trace: evaluation warning: The option `services.xserver.layout' defined in `/etc/nixos/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
-trace: evaluation warning: The ‘gnome.gnome-tweaks’ was moved to top-level. Please use ‘pkgs.gnome-tweaks’ directly.
+trace: warning: The option `services.xserver.xkbVariant' defined in `/etc/nixos/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
+trace: warning: The option `services.xserver.layout' defined in `/etc/nixos/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
 activating the configuration...
 setting up /etc...
 reloading user units for felix...
 restarting sysinit-reactivation.target
-the following new units were started: sysinit-reactivation.target, systemd-tmpfiles-resetup.service
