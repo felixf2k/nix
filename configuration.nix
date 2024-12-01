@@ -95,6 +95,7 @@
       docker-compose
       lens
       microsoft-edge
+      postman
     ];
   };
 
