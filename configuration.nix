@@ -102,6 +102,7 @@
       microsoft-edge
       cargo
       rustc
+      python
     ];
   };
 
