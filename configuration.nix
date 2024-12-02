@@ -138,6 +138,10 @@
       vscodeExtensions = with vscode-extensions; [
         rust-lang.rust-analyzer
 	svelte.svelte-vscode
+	bradlc.vscode-tailwindcss
+	gruntfuggly.todo-tree
+	dbaeumer.vscode-eslint
+	esbenp.prettier-vscode
       ];
     })
     rust-analyzer
