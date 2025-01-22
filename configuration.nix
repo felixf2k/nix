@@ -16,7 +16,7 @@
   networking = {
     hostName = "laptop";
     firewall = {
-      allowedTCPPorts = [ 5173 ];
+      allowedTCPPorts = [ 5173 4173 ];
     };
   };
 
