@@ -91,6 +91,7 @@
     description = "Felix Fischerkeller";
     extraGroups = [ "networkmanager" "wheel" "docker"];
     packages = with pkgs; [
+      steam
       thunderbird
       chromium
       microsoft-edge
