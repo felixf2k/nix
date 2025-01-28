@@ -91,7 +91,6 @@
     description = "Felix Fischerkeller";
     extraGroups = [ "networkmanager" "wheel" "docker"];
     packages = with pkgs; [
-      steam
       thunderbird
       chromium
       microsoft-edge
@@ -140,8 +139,7 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.      
     git
-    rustc
-    gcc
+    steam
     vscode
     gnome3.gnome-tweaks
     (vscode-with-extensions.override {
