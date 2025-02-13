@@ -102,6 +102,7 @@
       lens
       microsoft-edge
       postman
+      pnpm_9
     ];
   };
 
@@ -147,7 +148,7 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.      
     git
     vscode
-    gnome3.gnome-tweaks
+    gnome.gnome-tweaks
     (vscode-with-extensions.override {
       vscodeExtensions = with vscode-extensions; [
         rust-lang.rust-analyzer
