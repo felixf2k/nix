@@ -102,7 +102,7 @@
       lens
       microsoft-edge
       postman
-      pnpm_9
+      bun
     ];
   };
 
