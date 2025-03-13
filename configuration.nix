@@ -103,6 +103,7 @@
       microsoft-edge
       postman
       bun
+      nextcloud-client
     ];
   };
 
