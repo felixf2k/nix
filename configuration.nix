@@ -104,6 +104,7 @@
       postman
       bun
       nextcloud-client
+      obsidian    
     ];
   };
 
