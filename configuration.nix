@@ -103,8 +103,8 @@
       microsoft-edge
       postman
       bun
-      nextcloud-client
-      obsidian    
+      nextcloud-talk-desktop
+      obsidian
     ];
   };
 
