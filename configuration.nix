@@ -150,19 +150,7 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.      
     git
     vscode
-    gnome.gnome-tweaks
-    (vscode-with-extensions.override {
-      vscodeExtensions = with vscode-extensions; [
-        rust-lang.rust-analyzer
-	svelte.svelte-vscode
-	bradlc.vscode-tailwindcss
-	gruntfuggly.todo-tree
-	dbaeumer.vscode-eslint
-	esbenp.prettier-vscode
-      ];
-    })
-    rust-analyzer
-    cargo
+    tree
   # wget
   ];
 
