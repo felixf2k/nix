@@ -105,6 +105,7 @@
       bun
       nextcloud-talk-desktop
       obsidian
+      libreoffice
     ];
   };
 
