@@ -106,6 +106,7 @@
       nextcloud-talk-desktop
       obsidian
       libreoffice
+      openapi-generator-cli
     ];
   };
 
