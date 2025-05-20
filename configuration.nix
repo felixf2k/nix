@@ -107,6 +107,7 @@
       obsidian
       libreoffice
       openapi-generator-cli
+      jetbrains.webstorm
     ];
   };
 
