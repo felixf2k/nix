@@ -12,195 +12,110 @@ evaluation warning: The ‘gnome.hitori’ was moved to top-level. Please use �
 evaluation warning: The ‘gnome.atomix’ was moved to top-level. Please use ‘pkgs.atomix’ directly.
 evaluation warning: The option `services.xserver.xkbVariant' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
 evaluation warning: The option `services.xserver.layout' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
-these 6 derivations will be built:
-  /nix/store/1g5hx4z9k2ylrm7zmipl2fbma2sq1n8b-WebStorm-2024.3.1.1.tar.gz.drv
-  /nix/store/pqh4fxcpbdsikr3jrzdzzyzp23326936-webstorm.desktop.drv
-  /nix/store/g3ds6lq3dym3yca3bbdavnc7sqrfqiz7-webstorm-2024.3.1.1.drv
-  /nix/store/rgirhy2af0q9jx5ic5p4ds6nsmw2psqq-user-environment.drv
-  /nix/store/x52lkyway0sbhcszv3zqw75zifp1r9pl-etc.drv
-  /nix/store/w69bvx780lm12a0jb01xpfi9q1xwdj8k-nixos-system-laptop-24.11.713790.2b4230bf03de.drv
-these 10 paths will be fetched (669.26 MiB download, 1076.61 MiB unpacked):
-  /nix/store/bxhckqxylrkykwbahjf57svssn3avdzk-auto-patchelf-0-unstable-2024-08-14
-  /nix/store/3jzr6rnp46kscz7vxanjn5ri12q6hqcd-auto-patchelf-hook
-  /nix/store/x3v2y6y2aj3s8nkh3fli51mv01l967g6-fsnotifier-243.22562.218
-  /nix/store/ji7ldyrlf2p0ksspagsylrjn2nfa0aar-jetbrains-jdk-jcef-21.0.4-b598.4
-  /nix/store/zys4zfijhh9d6516bfv42hp4ynvi9ry8-libdbm-243.22562.218
-  /nix/store/853x25i5zas3gb5n41fxa0rgyzzj4j4v-musl-1.2.5
-  /nix/store/h70d529j5plrs9570jma41mrnchph4sx-musl-1.2.5-bin
-  /nix/store/9wk8510swid6amsycfpqrfgaznzv7ixz-musl-1.2.5-dev
-  /nix/store/wfpqvr5q7d229472c7i0xwgrsp06nd3y-python3-3.12.8-env
-  /nix/store/i8qqix9ackkdwhplmpbb1a03gpkyq19y-python3.12-pyelftools-0.31
-copying path '/nix/store/853x25i5zas3gb5n41fxa0rgyzzj4j4v-musl-1.2.5' from 'https://cache.nixos.org'...
-copying path '/nix/store/x3v2y6y2aj3s8nkh3fli51mv01l967g6-fsnotifier-243.22562.218' from 'https://cache.nixos.org'...
-copying path '/nix/store/ji7ldyrlf2p0ksspagsylrjn2nfa0aar-jetbrains-jdk-jcef-21.0.4-b598.4' from 'https://cache.nixos.org'...
-copying path '/nix/store/zys4zfijhh9d6516bfv42hp4ynvi9ry8-libdbm-243.22562.218' from 'https://cache.nixos.org'...
-building '/nix/store/pqh4fxcpbdsikr3jrzdzzyzp23326936-webstorm.desktop.drv'...
-building '/nix/store/1g5hx4z9k2ylrm7zmipl2fbma2sq1n8b-WebStorm-2024.3.1.1.tar.gz.drv'...
-copying path '/nix/store/i8qqix9ackkdwhplmpbb1a03gpkyq19y-python3.12-pyelftools-0.31' from 'https://cache.nixos.org'...
-
-trying https://download.jetbrains.com/webstorm/WebStorm-2024.3.1.1.tar.gz
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-copying path '/nix/store/h70d529j5plrs9570jma41mrnchph4sx-musl-1.2.5-bin' from 'https://cache.nixos.org'...
-copying path '/nix/store/wfpqvr5q7d229472c7i0xwgrsp06nd3y-python3-3.12.8-env' from 'https://cache.nixos.org'...
-100   138  100   138    0     0    706      0 --:--:-- --:--:-- --:--:--   707
-copying path '/nix/store/bxhckqxylrkykwbahjf57svssn3avdzk-auto-patchelf-0-unstable-2024-08-14' from 'https://cache.nixos.org'...
-copying path '/nix/store/9wk8510swid6amsycfpqrfgaznzv7ixz-musl-1.2.5-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/3jzr6rnp46kscz7vxanjn5ri12q6hqcd-auto-patchelf-hook' from 'https://cache.nixos.org'...
-100 1017M  100 1017M    0     0  2350k      0  0:07:23  0:07:23 --:--:-- 2487k
-building '/nix/store/g3ds6lq3dym3yca3bbdavnc7sqrfqiz7-webstorm-2024.3.1.1.drv'...
-Running phase: unpackPhase
-unpacking source archive /nix/store/b8dmvyrfilhd5mrgf8jqsgmgaj0kx2x2-WebStorm-2024.3.1.1.tar.gz
-source root is WebStorm-243.22562.222
-Running phase: patchPhase
-patching file plugins/remote-dev-server/bin/launcher.sh
-Hunk #1 succeeded at 321 (offset -1 lines).
-Hunk #2 succeeded at 370 (offset -1 lines).
-Running phase: updateAutotoolsGnuConfigScriptsPhase
-Running phase: configurePhase
-no configure script, doing nothing
-Running phase: buildPhase
-no Makefile or custom buildPhase, doing nothing
-Running phase: installPhase
-Running phase: fixupPhase
-shrinking RPATHs of ELF executables and libraries in /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/lib/pty4j/linux/x86-64/libpty.so
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/lib/native/linux-x86_64/libsqliteij.so
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/lib/jna/amd64/libjnidispatch.so
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/lib/async-profiler/amd64/libasyncProfiler.so
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/lib/async-profiler/aarch64/libasyncProfiler.so
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/cwm-plugin/quiche-native/linux-x86-64/libquiche.so
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/platform-ijent-impl/ijent-x86_64-unknown-linux-musl-release
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/platform-ijent-impl/ijent-aarch64-unknown-linux-musl-release
-patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/webp/lib/libwebp/linux/libwebp_jni.so
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-arm64
-patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-amd64
-patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/.webstorm-wrapped
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/remote-dev-server
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/restarter
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/fsnotifier
-shrinking /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/libdbm.so
-checking for references to /build/ in /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1...
-patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
-patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
-patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
-patching script interpreter paths in /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1
-/nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/remote-dev-server/bin/launcher.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/gwgqdl0242ymlikq9s9s62gkp5cvyal3-bash-5.2p37/bin/sh"
-/nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/remote-dev-server/bin/launcher.sh.orig: interpreter directive changed from "#!/bin/sh" to "/nix/store/gwgqdl0242ymlikq9s9s62gkp5cvyal3-bash-5.2p37/bin/sh"
-/nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/format.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/gwgqdl0242ymlikq9s9s62gkp5cvyal3-bash-5.2p37/bin/sh"
-/nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/remote-dev-server.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/gwgqdl0242ymlikq9s9s62gkp5cvyal3-bash-5.2p37/bin/sh"
-/nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/inspect.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/gwgqdl0242ymlikq9s9s62gkp5cvyal3-bash-5.2p37/bin/sh"
-/nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/jetbrains_client.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/gwgqdl0242ymlikq9s9s62gkp5cvyal3-bash-5.2p37/bin/sh"
-/nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/ltedit.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/gwgqdl0242ymlikq9s9s62gkp5cvyal3-bash-5.2p37/bin/sh"
-/nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/remote-dev-server-wrapped.sh: interpreter directive changed from "#!/usr/bin/env bash" to "/nix/store/gwgqdl0242ymlikq9s9s62gkp5cvyal3-bash-5.2p37/bin/bash"
-stripping (with command strip and flags -S -p) in  /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/bin
-automatically fixing dependencies for ELF files
-{'append_rpaths': [],
- 'extra_args': [],
- 'ignore_missing': [],
- 'keep_libc': False,
- 'libs': [PosixPath('/nix/store/3ibs1c03k683g2vv2rii60476w690xs3-make-shell-wrapper-hook/lib'),
-          PosixPath('/nix/store/mxi53f9xhkshf3la64awqacfmx9ppkzw-die-hook/lib'),
-          PosixPath('/nix/store/wnl9qpnhayry14lhcbdafhadsjwsdr6p-patchelf-0.15.0/lib'),
-          PosixPath('/nix/store/grpfa6f4czjg856b75xcsfan5qznxh6s-unzip-6.0/lib'),
-          PosixPath('/nix/store/3jzr6rnp46kscz7vxanjn5ri12q6hqcd-auto-patchelf-hook/lib'),
-          PosixPath('/nix/store/bxhckqxylrkykwbahjf57svssn3avdzk-auto-patchelf-0-unstable-2024-08-14/lib'),
-          PosixPath('/nix/store/wd1dlav3z5vwwv6yqj69xkzhldk5hpvb-binutils-wrapper-2.43.1/lib'),
-          PosixPath('/nix/store/ap724yhgv28mpsi1mmqcwypj4rrfhqmg-update-autotools-gnu-config-scripts-hook/lib'),
-          PosixPath('/nix/store/h9lc1dpi14z7is86ffhl3ld569138595-audit-tmpdir.sh/lib'),
-          PosixPath('/nix/store/m54bmrhj6fqz8nds5zcj97w9s9bckc9v-compress-man-pages.sh/lib'),
-          PosixPath('/nix/store/wgrbkkaldkrlrni33ccvm3b6vbxzb656-make-symlinks-relative.sh/lib'),
-          PosixPath('/nix/store/5yzw0vhkyszf2d179m0qfkgxmp5wjjx4-move-docs.sh/lib'),
-          PosixPath('/nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh/lib'),
-          PosixPath('/nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh/lib'),
-          PosixPath('/nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh/lib'),
-          PosixPath('/nix/store/jivxp510zxakaaic7qkrb7v1dd2rdbw9-multiple-outputs.sh/lib'),
-          PosixPath('/nix/store/12lvf0c7xric9cny7slvf9cmhypl1p67-patch-shebangs.sh/lib'),
-          PosixPath('/nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh/lib'),
-          PosixPath('/nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh/lib'),
-          PosixPath('/nix/store/aazf105snicrlvyzzbdj85sx4179rpfp-set-source-date-epoch-to-latest.sh/lib'),
-          PosixPath('/nix/store/gps9qrh99j7g02840wv5x78ykmz30byp-strip.sh/lib'),
-          PosixPath('/nix/store/888bkaqdpfpx72dd8bdc69qsqlgbhcvf-gcc-wrapper-13.3.0/lib'),
-          PosixPath('/nix/store/qlzvmgr8w9prdlyys7irqf86p7bndf5b-binutils-wrapper-2.43.1/lib'),
-          PosixPath('/nix/store/62qjb50708fdhb4f2y7zxyqr1afir4fk-gcc-13.3.0/lib'),
-          PosixPath('/nix/store/4gk773fqcsv4fh2rfkhs9bgfih86fdq8-gcc-13.3.0-lib/lib'),
-          PosixPath('/nix/store/9wk8510swid6amsycfpqrfgaznzv7ixz-musl-1.2.5-dev/lib'),
-          PosixPath('/nix/store/h70d529j5plrs9570jma41mrnchph4sx-musl-1.2.5-bin/lib'),
-          PosixPath('/nix/store/853x25i5zas3gb5n41fxa0rgyzzj4j4v-musl-1.2.5/lib'),
-          PosixPath('/nix/store/3ibs1c03k683g2vv2rii60476w690xs3-make-shell-wrapper-hook/lib'),
-          PosixPath('/nix/store/mxi53f9xhkshf3la64awqacfmx9ppkzw-die-hook/lib'),
-          PosixPath('/nix/store/wnl9qpnhayry14lhcbdafhadsjwsdr6p-patchelf-0.15.0/lib'),
-          PosixPath('/nix/store/grpfa6f4czjg856b75xcsfan5qznxh6s-unzip-6.0/lib'),
-          PosixPath('/nix/store/3jzr6rnp46kscz7vxanjn5ri12q6hqcd-auto-patchelf-hook/lib'),
-          PosixPath('/nix/store/bxhckqxylrkykwbahjf57svssn3avdzk-auto-patchelf-0-unstable-2024-08-14/lib'),
-          PosixPath('/nix/store/wd1dlav3z5vwwv6yqj69xkzhldk5hpvb-binutils-wrapper-2.43.1/lib'),
-          PosixPath('/nix/store/ap724yhgv28mpsi1mmqcwypj4rrfhqmg-update-autotools-gnu-config-scripts-hook/lib'),
-          PosixPath('/nix/store/h9lc1dpi14z7is86ffhl3ld569138595-audit-tmpdir.sh/lib'),
-          PosixPath('/nix/store/m54bmrhj6fqz8nds5zcj97w9s9bckc9v-compress-man-pages.sh/lib'),
-          PosixPath('/nix/store/wgrbkkaldkrlrni33ccvm3b6vbxzb656-make-symlinks-relative.sh/lib'),
-          PosixPath('/nix/store/5yzw0vhkyszf2d179m0qfkgxmp5wjjx4-move-docs.sh/lib'),
-          PosixPath('/nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh/lib'),
-          PosixPath('/nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh/lib'),
-          PosixPath('/nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh/lib'),
-          PosixPath('/nix/store/jivxp510zxakaaic7qkrb7v1dd2rdbw9-multiple-outputs.sh/lib'),
-          PosixPath('/nix/store/12lvf0c7xric9cny7slvf9cmhypl1p67-patch-shebangs.sh/lib'),
-          PosixPath('/nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh/lib'),
-          PosixPath('/nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh/lib'),
-          PosixPath('/nix/store/aazf105snicrlvyzzbdj85sx4179rpfp-set-source-date-epoch-to-latest.sh/lib'),
-          PosixPath('/nix/store/gps9qrh99j7g02840wv5x78ykmz30byp-strip.sh/lib'),
-          PosixPath('/nix/store/888bkaqdpfpx72dd8bdc69qsqlgbhcvf-gcc-wrapper-13.3.0/lib'),
-          PosixPath('/nix/store/qlzvmgr8w9prdlyys7irqf86p7bndf5b-binutils-wrapper-2.43.1/lib'),
-          PosixPath('/nix/store/62qjb50708fdhb4f2y7zxyqr1afir4fk-gcc-13.3.0/lib'),
-          PosixPath('/nix/store/4gk773fqcsv4fh2rfkhs9bgfih86fdq8-gcc-13.3.0-lib/lib'),
-          PosixPath('/nix/store/9wk8510swid6amsycfpqrfgaznzv7ixz-musl-1.2.5-dev/lib'),
-          PosixPath('/nix/store/h70d529j5plrs9570jma41mrnchph4sx-musl-1.2.5-bin/lib'),
-          PosixPath('/nix/store/853x25i5zas3gb5n41fxa0rgyzzj4j4v-musl-1.2.5/lib')],
- 'paths': [PosixPath('/nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1')],
- 'recursive': True,
- 'runtime_dependencies': []}
-setting interpreter of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/.webstorm-wrapped
-searching for dependencies of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/.webstorm-wrapped
-    libgcc_s.so.1 -> found: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
-setting RPATH to: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
-setting interpreter of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/remote-dev-server
-searching for dependencies of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/remote-dev-server
-    libgcc_s.so.1 -> found: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
-setting RPATH to: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
-searching for dependencies of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/restarter
-setting interpreter of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/fsnotifier
-searching for dependencies of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/fsnotifier
-searching for dependencies of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/bin/libdbm.so
-    libglib-2.0.so.0 -> found: /nix/store/6qkwbcx4q47dq4scz7rk4f3nlbr5937r-glib-2.82.1/lib
-setting RPATH to: /nix/store/6qkwbcx4q47dq4scz7rk4f3nlbr5937r-glib-2.82.1/lib
-searching for dependencies of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/lib/pty4j/linux/x86-64/libpty.so
-searching for dependencies of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/lib/native/linux-x86_64/libsqliteij.so
-searching for dependencies of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/lib/jna/amd64/libjnidispatch.so
-searching for dependencies of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/lib/async-profiler/amd64/libasyncProfiler.so
-skipping /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/lib/async-profiler/aarch64/libasyncProfiler.so because its architecture (AArch64) differs from target (x64)
-searching for dependencies of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/platform-ijent-impl/ijent-x86_64-unknown-linux-musl-release
-skipping /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/platform-ijent-impl/ijent-aarch64-unknown-linux-musl-release because it is statically linked
-searching for dependencies of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/cwm-plugin/quiche-native/linux-x86-64/libquiche.so
-    libgcc_s.so.1 -> found: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
-setting RPATH to: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
-searching for dependencies of /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/webp/lib/libwebp/linux/libwebp_jni.so
-skipping /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-arm64 because it is statically linked
-skipping /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/webstorm/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-amd64 because it is statically linked
-auto-patchelf: 0 dependencies could not be satisfied
-rewriting symlink /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/share/icons/hicolor/scalable/apps/webstorm.svg to be relative to /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1
-rewriting symlink /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/share/pixmaps/webstorm.svg to be relative to /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1
-rewriting symlink /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/share/pixmaps/webstorm.png to be relative to /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1
-rewriting symlink /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/bin/webstorm-remote-dev-server to be relative to /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1
-rewriting symlink /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1/bin/webstorm to be relative to /nix/store/zfj0d6a17b962fqm01k7p5xg573jrppr-webstorm-2024.3.1.1
-building '/nix/store/rgirhy2af0q9jx5ic5p4ds6nsmw2psqq-user-environment.drv'...
-created 406 symlinks in user environment
+these 23 derivations will be built:
+  /nix/store/sywmqib9q664gjn92z2j85c00ab2ixx9-system-path.drv
+  /nix/store/6fa0xwdqqadzlnx466z74iisc39g21ix-dbus-1.drv
+  /nix/store/sxq2gr3nb6adqsmla066b69jc2ilnpvr-X-Restart-Triggers-dbus.drv
+  /nix/store/1xsl0yd7pf3skbcvlnv6dknl523h6i0c-unit-dbus.service.drv
+  /nix/store/3chyi28a2advljmzqnhnxnmhnifnb4vr-desktops.drv
+  /nix/store/670bk486gap0cgmyi25z58cvs56lbnrs-unit-display-manager.service.drv
+  /nix/store/p7slb0w8rv3d8dyxri06im2v3527b7fl-X-Restart-Triggers-polkit.drv
+  /nix/store/rp8a52fhip3albj64v7vy6whrz8amzx5-unit-polkit.service.drv
+  /nix/store/zhhari1j6yv47cvddzmhp2h6fjm6f318-unit-accounts-daemon.service.drv
+  /nix/store/138akqz2fxwwpjzsmas11gxrq1b9msxc-system-units.drv
+  /nix/store/1dkzmqgw8xrbvrbyv9z68gjc1iananq1-user-generators.drv
+  /nix/store/4zjkmbv8lh1w469fakbqslxxis48pnzm-system-generators.drv
+  /nix/store/968y2dc2snk51n6ib3n4xkpmvhqh565v-swaylock.pam.drv
+  /nix/store/9hmidkwq1w7cggmnb88n9qmr32afjy95-system-shutdown.drv
+  /nix/store/kp4mcsy8xrjjc4mnc7b4421vsmh51xic-user-environment.drv
+  /nix/store/r4k2ivrbg3ksxniam1zndm5xr3z9qjaz-set-environment.drv
+  /nix/store/9n5a07by92glxw7vjb0cxr7cir8mh4jm-unit-xdg-autostart-if-no-desktop-manager.target.drv
+  /nix/store/yvw3pf7jvqd800x3i5w47np93mql184s-unit-dbus.service.drv
+  /nix/store/s8j4nc4fx86w606nlrrvf76wcv94ph1m-user-units.drv
+  /nix/store/x7s7sr37ndc9bchx6y966as2ji1wm1a7-etc-pam-environment.drv
+  /nix/store/yax87x2ha78ii2gwh5ca6dz0rph20czh-etc-profile.drv
+  /nix/store/70r5z040ccl58wvma4dfqkypfa2mvqmn-etc.drv
+  /nix/store/598fbx24z1ygs3dicrq8d16ndwwy5i2a-nixos-system-laptop-24.11.713790.2b4230bf03de.drv
+these 21 paths will be fetched (63.25 MiB download, 122.46 MiB unpacked):
+  /nix/store/8g7f75irm34192snzn5ghhh1kjky82gq-aquamarine-0.4.4
+  /nix/store/l6s0g4rpf82i933xk8y15cs5w0im79mw-gcc-14.2.0-lib
+  /nix/store/lhb4a2v65k2nic9qa5f5f0va6d29z7js-gcc-14.2.0-libgcc
+  /nix/store/g1rx9anygz5pasv8qdxkmsnllax0a4fy-hyprcursor-0.1.10-lib
+  /nix/store/5cjs0sb8xya6i9zn7pf96jgfx9jd12yp-hyprland-0.45.2
+  /nix/store/jk9llr471w90lhk42amcblb17i9jmjhi-hyprland-0.45.2-man
+  /nix/store/nwj419m44wwa7wcrynyhp01bbfsz9lzy-hyprlang-0.5.2
+  /nix/store/k3q5312jxcy1fhnk77m2w1dlsizcjqm0-hyprutils-0.2.5
+  /nix/store/wdkqh9ikmz03h2bn2paqa209bca021la-kitty-0.37.0
+  /nix/store/1bm0vcj0f5hjv39wv7izxhjldmh28hdq-kitty-0.37.0-terminfo
+  /nix/store/j9yfz7xrya222aqflgi3ab96v9kyi9nv-libzip-1.11.1
+  /nix/store/69v6c64pn1ay26207b0cmzi40qpr9q0w-ncurses-6.4.20221231-dev
+  /nix/store/lxnqbm5986fcwk0062x8h601phxskg4x-pkgconf-2.3.0
+  /nix/store/jf7mz882amfs4drinqgdrddjng3k40nq-pkgconf-2.3.0-lib
+  /nix/store/b7ixmgw7i326h9w6qmvbmayglj8jakdx-pkgconf-wrapper-2.3.0
+  /nix/store/xdrdqg2sr6ia37rkq8jmpjifmlcinx4i-sdbus-cpp-1.5.0
+  /nix/store/7aqbm7ghzi6dk2jqpl9hva8jdbxaq8cg-seatd-0.8.0
+  /nix/store/dga99nzq8i3jvpc5sn0fff21z0rgxrzk-slurp-1.5.0
+  /nix/store/0az4gyzqr15y12id2xzrryr6ya378crm-tomlplusplus-3.4.0
+  /nix/store/zrl0l5ablggq94d3c042gjy23384pr30-xcb-util-errors-1.0.1
+  /nix/store/9pc277rgbpd629vzjp6yc5n30p01ya2g-xdg-desktop-portal-hyprland-1.3.6
+copying path '/nix/store/jk9llr471w90lhk42amcblb17i9jmjhi-hyprland-0.45.2-man' from 'https://cache.nixos.org'...
+copying path '/nix/store/lhb4a2v65k2nic9qa5f5f0va6d29z7js-gcc-14.2.0-libgcc' from 'https://cache.nixos.org'...
+copying path '/nix/store/1bm0vcj0f5hjv39wv7izxhjldmh28hdq-kitty-0.37.0-terminfo' from 'https://cache.nixos.org'...
+building '/nix/store/968y2dc2snk51n6ib3n4xkpmvhqh565v-swaylock.pam.drv'...
+copying path '/nix/store/k3q5312jxcy1fhnk77m2w1dlsizcjqm0-hyprutils-0.2.5' from 'https://cache.nixos.org'...
+copying path '/nix/store/nwj419m44wwa7wcrynyhp01bbfsz9lzy-hyprlang-0.5.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/xdrdqg2sr6ia37rkq8jmpjifmlcinx4i-sdbus-cpp-1.5.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/dga99nzq8i3jvpc5sn0fff21z0rgxrzk-slurp-1.5.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/0az4gyzqr15y12id2xzrryr6ya378crm-tomlplusplus-3.4.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/zrl0l5ablggq94d3c042gjy23384pr30-xcb-util-errors-1.0.1' from 'https://cache.nixos.org'...
+building '/nix/store/9n5a07by92glxw7vjb0cxr7cir8mh4jm-unit-xdg-autostart-if-no-desktop-manager.target.drv'...
+copying path '/nix/store/j9yfz7xrya222aqflgi3ab96v9kyi9nv-libzip-1.11.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/69v6c64pn1ay26207b0cmzi40qpr9q0w-ncurses-6.4.20221231-dev' from 'https://cache.nixos.org'...
+copying path '/nix/store/7aqbm7ghzi6dk2jqpl9hva8jdbxaq8cg-seatd-0.8.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/jf7mz882amfs4drinqgdrddjng3k40nq-pkgconf-2.3.0-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/l6s0g4rpf82i933xk8y15cs5w0im79mw-gcc-14.2.0-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/g1rx9anygz5pasv8qdxkmsnllax0a4fy-hyprcursor-0.1.10-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/8g7f75irm34192snzn5ghhh1kjky82gq-aquamarine-0.4.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/wdkqh9ikmz03h2bn2paqa209bca021la-kitty-0.37.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/lxnqbm5986fcwk0062x8h601phxskg4x-pkgconf-2.3.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/b7ixmgw7i326h9w6qmvbmayglj8jakdx-pkgconf-wrapper-2.3.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/5cjs0sb8xya6i9zn7pf96jgfx9jd12yp-hyprland-0.45.2' from 'https://cache.nixos.org'...
+building '/nix/store/kp4mcsy8xrjjc4mnc7b4421vsmh51xic-user-environment.drv'...
+created 483 symlinks in user environment
 gtk-update-icon-cache: Cache file created successfully.
-building '/nix/store/x52lkyway0sbhcszv3zqw75zifp1r9pl-etc.drv'...
-building '/nix/store/w69bvx780lm12a0jb01xpfi9q1xwdj8k-nixos-system-laptop-24.11.713790.2b4230bf03de.drv'...
+copying path '/nix/store/9pc277rgbpd629vzjp6yc5n30p01ya2g-xdg-desktop-portal-hyprland-1.3.6' from 'https://cache.nixos.org'...
+building '/nix/store/3chyi28a2advljmzqnhnxnmhnifnb4vr-desktops.drv'...
+building '/nix/store/4zjkmbv8lh1w469fakbqslxxis48pnzm-system-generators.drv'...
+building '/nix/store/sywmqib9q664gjn92z2j85c00ab2ixx9-system-path.drv'...
+building '/nix/store/9hmidkwq1w7cggmnb88n9qmr32afjy95-system-shutdown.drv'...
+building '/nix/store/1dkzmqgw8xrbvrbyv9z68gjc1iananq1-user-generators.drv'...
+building '/nix/store/670bk486gap0cgmyi25z58cvs56lbnrs-unit-display-manager.service.drv'...
+warning: collision between `/nix/store/xn49v7k6f6bwl4d55dqcxhiirm7ps5lv-xwayland-24.1.4/share/man/man1/Xserver.1.gz' and `/nix/store/f2f0lqm70iap6lsvchvk15ymvhiip4m9-xorg-server-21.1.14/share/man/man1/Xserver.1.gz'
+warning: collision between `/nix/store/xn49v7k6f6bwl4d55dqcxhiirm7ps5lv-xwayland-24.1.4/lib/xorg/protocol.txt' and `/nix/store/f2f0lqm70iap6lsvchvk15ymvhiip4m9-xorg-server-21.1.14/lib/xorg/protocol.txt'
+created 16086 symlinks in user environment
+gtk-update-icon-cache: Cache file created successfully.
+gtk-update-icon-cache: Cache file created successfully.
+building '/nix/store/p7slb0w8rv3d8dyxri06im2v3527b7fl-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/6fa0xwdqqadzlnx466z74iisc39g21ix-dbus-1.drv'...
+building '/nix/store/x7s7sr37ndc9bchx6y966as2ji1wm1a7-etc-pam-environment.drv'...
+building '/nix/store/r4k2ivrbg3ksxniam1zndm5xr3z9qjaz-set-environment.drv'...
+building '/nix/store/zhhari1j6yv47cvddzmhp2h6fjm6f318-unit-accounts-daemon.service.drv'...
+building '/nix/store/sxq2gr3nb6adqsmla066b69jc2ilnpvr-X-Restart-Triggers-dbus.drv'...
+building '/nix/store/yax87x2ha78ii2gwh5ca6dz0rph20czh-etc-profile.drv'...
+building '/nix/store/rp8a52fhip3albj64v7vy6whrz8amzx5-unit-polkit.service.drv'...
+building '/nix/store/1xsl0yd7pf3skbcvlnv6dknl523h6i0c-unit-dbus.service.drv'...
+building '/nix/store/yvw3pf7jvqd800x3i5w47np93mql184s-unit-dbus.service.drv'...
+building '/nix/store/138akqz2fxwwpjzsmas11gxrq1b9msxc-system-units.drv'...
+building '/nix/store/s8j4nc4fx86w606nlrrvf76wcv94ph1m-user-units.drv'...
+building '/nix/store/70r5z040ccl58wvma4dfqkypfa2mvqmn-etc.drv'...
+building '/nix/store/598fbx24z1ygs3dicrq8d16ndwwy5i2a-nixos-system-laptop-24.11.713790.2b4230bf03de.drv'...
+stopping the following units: accounts-daemon.service
+NOT restarting the following changed units: display-manager.service
 activating the configuration...
 setting up /etc...
 reloading user units for felix...
 restarting sysinit-reactivation.target
+reloading the following units: dbus.service
+restarting the following units: polkit.service
+starting the following units: accounts-daemon.service
 the following new units were started: run-credentials-systemd\x2dtmpfiles\x2dresetup.service.mount, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
