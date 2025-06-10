@@ -25,7 +25,7 @@
 
   services.strongswan = {
     enable = true;
-    secrets = [ "../ci-dev-clients.secrets" ];
+    secrets = ["/etc/ipsec.d/ci-dev-clients.secrets"];
     connections = {
       ims = {
         keyexchange = "ikev2";
