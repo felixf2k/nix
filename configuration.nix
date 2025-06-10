@@ -109,8 +109,8 @@
       libreoffice
       openapi-generator-cli
       jetbrains.webstorm
+      vscode
       # pkgs.kitty # required for the default Hyprland config
-      libreswan
     ];
   };
 
@@ -131,7 +131,7 @@
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
-  ]) ++ (with pkgs.gnome; [
+  ]) ++ (with pkgs; [
     cheese # webcam tool
     gnome-music
     epiphany # web browser
@@ -155,8 +155,8 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.      
     git
-    vscode
     tree
+    libreswan
   # wget
   ];
 
