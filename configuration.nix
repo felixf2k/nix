@@ -115,7 +115,6 @@
   
 services.libreswan = {
     enable = true;
-
     connections = {
       "Ci-Dev-Clients" = ''
         type=tunnel
