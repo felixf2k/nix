@@ -18,30 +18,6 @@
     firewall = {
       allowedTCPPorts = [ 5173 4173 ];
     };
-    networkmanager = {
-      enableStrongSwan = true;
-    };
-  };
-
-  services.strongswan = {
-    enable = true;
-    secrets = ["/etc/ipsec.d/ci-dev-clients.secrets"];
-    connections = {
-      ims = {
-        type = "tunnel";
-        auto = "start";
-        keyexchange = "ikev2";
-        mobike = "yes";
-        left = "%defaultroute";
-        leftsourceip = "%config";
-        right = "212.87.147.6";
-        rightid = "@fortigate-0001";
-        rightsubnet = "198.18.233.0/24,10.0.1.0/24";
-        rekey = "yes";
-        fragmentation = "yes";
-        authby = "secret";
-      };
-    };
   };
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -108,7 +84,7 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-  programs.hyprland.enable = false;
+  # programs.hyprland.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.felix = {
@@ -133,7 +109,8 @@
       libreoffice
       openapi-generator-cli
       jetbrains.webstorm
-      pkgs.kitty # required for the default Hyprland config
+      # pkgs.kitty # required for the default Hyprland config
+      libreswan
     ];
   };
 
@@ -174,12 +151,12 @@
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
+  # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.      
     git
     vscode
     tree
-    strongswan
   # wget
   ];
 
