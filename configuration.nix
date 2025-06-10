@@ -110,7 +110,6 @@
       openapi-generator-cli
       jetbrains.webstorm
       pkgs.kitty # required for the default Hyprland config
-      libreswan
     ];
   };
   
@@ -184,6 +183,7 @@ services.libreswan = {
     git
     vscode
     tree
+    libreswan
   # wget
   ];
 
