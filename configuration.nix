@@ -18,6 +18,9 @@
     firewall = {
       allowedTCPPorts = [ 5173 4173 ];
     };
+    networkmanager = {
+      enableStrongSwan = true;
+    };
   };
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
