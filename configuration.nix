@@ -117,8 +117,7 @@ services.libreswan = {
     enable = true;
     connections = {
     # The name of this attribute should match the name after "conn"
-    "Ci-Dev-Clients" = ''
-      conn Ci-Dev-Clients
+    ims = ''
         type=tunnel
         auto=start
         keyexchange=ikev2
