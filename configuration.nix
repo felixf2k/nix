@@ -25,7 +25,7 @@
 
   services.strongswan = {
     enable = true;
-    secrets = ["/etc/ipsec.d/ci-dev-clients.secrets"];
+    secrets = [ "../ci-dev-clients.secrets" ];
     connections = {
       ims = {
         keyexchange = "ikev2";
@@ -40,7 +40,7 @@
     	rightsubnet="198.18.233.0/24,10.0.1.0/24";
     	rightauth="psk";
     	fragmentation="yes";
-    	rekey="yes";
+    	# rekey="yes";
       };
     };
   };
