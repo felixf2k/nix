@@ -17,12 +17,13 @@
     hostName = "laptop";
     firewall = {
       allowedTCPPorts = [ 5173 4173 ];
+      allowedUDPPorts = [ 500 4500 ];
     };
   };
 
-  services.libreswan = {
-    enable = true;
-  };
+  services.libreswan.enable = true;
+  environment.etc."/etc/ipsec.secrets".source = "/etc/nixos/vpn/ims.conf";
+  environment.etc."/etc/ipsec.conf".source = "/etc/nixos/vpn/ims.secrets";
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -116,13 +117,6 @@
       vscode
       # pkgs.kitty # required for the default Hyprland config
     ];
-  };
-
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
   # enable docker
