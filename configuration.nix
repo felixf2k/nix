@@ -123,6 +123,7 @@ services.libreswan = {
         keyexchange=ikev2
         mobike=yes
         left=%defaultroute
+        leftid=@laptop
         leftmodecfgclient=yes
         rightmodecfgserver=yes
         right=212.87.147.6
