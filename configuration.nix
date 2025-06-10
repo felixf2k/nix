@@ -25,6 +25,7 @@
 
   services.strongswan = {
     enable = true;
+    secrets = ["/etc/ipsec.d/ci-dev-clients.secrets"];
     connections = {
       ims = {
         keyexchange = "ikev2";
@@ -32,14 +33,14 @@
         type = "tunnel";
         mobike = "yes";
         left = "%any";
-	 leftsourceip="%config";  # entspricht leftmodecfgclient=yes
-    leftauth="psk";
-    right="212.87.147.6";
-    rightid="@fortigate-0001";
-    rightsubnet="198.18.233.0/24,10.0.1.0/24";
-    rightauth="psk";
-    fragmentation="yes";
-    rekey="yes";
+	leftsourceip="%config";  # entspricht leftmodecfgclient=yes
+    	leftauth="psk";
+    	right="212.87.147.6";
+    	rightid="@fortigate-0001";
+    	rightsubnet="198.18.233.0/24,10.0.1.0/24";
+    	rightauth="psk";
+    	fragmentation="yes";
+    	rekey="yes";
       };
     };
   };
