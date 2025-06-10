@@ -23,6 +23,27 @@
     };
   };
 
+  services.strongswan = {
+    enable = true;
+    connections = {
+      ims = {
+        keyexchange = "ikev2";
+        auto = "start";
+        type = "tunnel";
+        mobike = "yes";
+        left = "%any";
+	 leftsourceip="%config";  # entspricht leftmodecfgclient=yes
+    leftauth="psk";
+    right="212.87.147.6";
+    rightid="@fortigate-0001";
+    rightsubnet="198.18.233.0/24,10.0.1.0/24";
+    rightauth="psk";
+    fragmentation="yes";
+    rekey="yes";
+      };
+    };
+  };
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -115,10 +136,6 @@
       pkgs.kitty # required for the default Hyprland config
     ];
   };
-  
-  services.libreswan = {
-    enable = true;
-  };
 
   programs.steam = {
     enable = true;
@@ -163,7 +180,6 @@
     git
     vscode
     tree
-    libreswan
   # wget
   ];
 
