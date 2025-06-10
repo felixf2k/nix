@@ -113,6 +113,33 @@
       libreswan
     ];
   };
+  
+services.libreswan = {
+    enable = true;
+
+    connections = {
+      "Ci-Dev-Clients" = ''
+        type=tunnel
+        auto=start
+        keyexchange=ikev2
+        mobike=yes
+        left=%defaultroute
+        leftmodecfgclient=yes
+        rightmodecfgserver=yes
+        right=212.87.147.6
+        rightid=@fortigate-0001
+        rightsubnets=198.18.233.0/24,10.0.1.0/24
+        rekey=yes
+        fragmentation=yes
+        authby=secret
+      '';
+
+      # You can add other connections here as well
+      # "another-connection-name" = ''
+      #  ...
+      # '';
+    };
+  };
 
   programs.steam = {
     enable = true;
