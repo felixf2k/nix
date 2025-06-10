@@ -116,13 +116,15 @@
 services.libreswan = {
     enable = true;
     connections = {
-      "Ci-Dev-Clients" = ''
+    # The name of this attribute should match the name after "conn"
+    "Ci-Dev-Clients" = ''
+      conn Ci-Dev-Clients
         type=tunnel
         auto=start
         keyexchange=ikev2
         mobike=yes
         left=%defaultroute
-        leftid=laptop
+        leftid="@laptop"
         leftmodecfgclient=yes
         rightmodecfgserver=yes
         right=212.87.147.6
@@ -131,7 +133,7 @@ services.libreswan = {
         rekey=yes
         fragmentation=yes
         authby=secret
-      '';
+    '';
 
       # You can add other connections here as well
       # "another-connection-name" = ''
