@@ -115,29 +115,32 @@
   
 services.libreswan = {
     enable = true;
+    configSetup = ''
+      secretsfile=/etc/ipsec.d/ci-dev-clients.secret
+      protostack=netkey
+      virtual_private=%v4:10.0.0.0/8,%v4:192.168.0.0/16,%v4:172.16.0.0/12,%v4:25.0.0.0/8,%v4:100.64.0.0/10,%v6:fd00::/8,%v6:fe80::/10
+    '';
+    
     connections = {
     # The name of this attribute should match the name after "conn"
-    ims = ''
-        type=tunnel
-        auto=start
-        keyexchange=ikev2
-        mobike=yes
-        left=%defaultroute
-        leftmodecfgclient=yes
-        rightmodecfgserver=yes
-        right=212.87.147.6
-        rightid=@fortigate-0001
-        rightsubnets=198.18.233.0/24,10.0.1.0/24
-        rekey=yes
-        fragmentation=yes
-        authby=secret
-    '';
-
-      # You can add other connections here as well
-      # "another-connection-name" = ''
-      #  ...
-      # '';
+      ims = ''
+          type=tunnel
+          auto=start
+          keyexchange=ikev2
+          mobike=yes
+          left=%defaultroute
+          leftmodecfgclient=yes
+          rightmodecfgserver=yes
+          right=212.87.147.6
+          rightid=@fortigate-0001
+          rightsubnets=198.18.233.0/24,10.0.1.0/24
+          rekey=yes
+          fragmentation=yes
+          authby=secret
+      '';
     };
+    
+    
   };
 
   programs.steam = {
