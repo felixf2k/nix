@@ -21,9 +21,14 @@
     };
   };
 
-  services.libreswan.enable = true;
-  environment.etc."/etc/ipsec.secrets".source = "/etc/nixos/vpn/ims.conf";
-  environment.etc."/etc/ipsec.conf".source = "/etc/nixos/vpn/ims.secrets";
+  services.libreswan = {
+    enable = true;
+    connections = {
+      ims = ''
+        
+      '';
+    };
+  };
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -115,6 +120,7 @@
       openapi-generator-cli
       jetbrains.webstorm
       vscode
+      pnpm_9
       # pkgs.kitty # required for the default Hyprland config
     ];
   };
