@@ -48,12 +48,7 @@ in
         rekey = "yes";
       };
     };
-    # Point to the secrets file. This will be automatically managed by Strongswan.
-    # The path here is relative to the Nix store for generated files.
-    # We will define the actual content of this file below.
-    secrets = [
-      "/run/keys/ipsec.secret"
-    ];
+    secrets = [ "/etc/ipsec.d/ipsec.secrets" ];
   };
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
