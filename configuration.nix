@@ -36,6 +36,7 @@ in
         mobike = "yes";
 
         left = "%any";
+        leftid="@laptop";
         leftsourceip = "%config"; # entspricht leftmodecfgclient=yes
         leftauth = "psk";
 
