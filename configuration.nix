@@ -4,6 +4,9 @@
 
 { config, pkgs, ... }:
 
+let
+  secrets = import ./secrets.nix; # Import your secrets file
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -12,23 +15,45 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  
+
   networking = {
     hostName = "laptop";
     firewall = {
       allowedTCPPorts = [ 5173 4173 ];
       allowedUDPPorts = [ 500 4500 ];
-      trustedInterfaces = [ "docker0" ];
     };
   };
 
-  services.libreswan = {
+  # Enable and configure Strongswan
+  services.strongswan = {
     enable = true;
     connections = {
-      ims = ''
-        
-      '';
+      # This is your VPN connection as provided by your colleague
+      "CI-Dev-Clients" = {
+        keyexchange = "ikev2";
+        auto = "start";
+        type = "tunnel";
+        mobike = "yes";
+
+        left = "%any";
+        leftsourceip = "%config"; # entspricht leftmodecfgclient=yes
+        leftauth = "psk";
+
+        right = "212.87.147.6";
+        rightid = "@fortigate-0001";
+        rightsubnet = "198.18.233.0/24,10.0.1.0/24";
+        rightauth = "psk";
+
+        fragmentation = "yes";
+        rekey = "yes";
+      };
     };
+    # Point to the secrets file. This will be automatically managed by Strongswan.
+    # The path here is relative to the Nix store for generated files.
+    # We will define the actual content of this file below.
+    secrets = [
+      "/run/keys/ipsec.secret"
+    ];
   };
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -158,11 +183,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.      
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     git
     tree
-    libreswan
-  # wget
+    # Remove libreswan if you no longer need it for other purposes,
+    # otherwise it can coexist but Strongswan will handle the VPN here.
+    # libreswan
+    strongswan # Add strongswan to your system packages for cli tools
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -179,6 +206,7 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
+  # These are already covered by the Strongswan setup, but good to have explicit.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
