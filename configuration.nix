@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 let
   secrets = import ./secrets.nix; # Import your secrets file
@@ -49,9 +49,8 @@ in
         rekey = "yes";
       };
     };
-    secrets = [ "/etc/ipsec.d/ipsec.secrets" ];
   };
-
+  environment.etc."ipsec.secrets".source = lib.mkForce ./ipsec.secrets;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
