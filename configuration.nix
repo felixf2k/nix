@@ -126,22 +126,14 @@ in
       thunderbird
       chromium
       microsoft-edge
-      nodejs
       keepassxc
       spotify
       gimp
-      docker-compose
       lens
       microsoft-edge
-      postman
-      bun
       nextcloud-talk-desktop
       obsidian
-      libreoffice
-      openapi-generator-cli
-      jetbrains.webstorm
       vscode
-      pnpm_9
       # pkgs.kitty # required for the default Hyprland config
     ];
   };
