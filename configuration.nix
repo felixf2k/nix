@@ -45,12 +45,6 @@ in
         rightsubnet = "198.18.233.0/24,10.0.1.0/24";
         rightauth = "psk";
 
-        # Keying and lifetime parameters from your old 'conn %default'
-        ikelifetime = "60m";
-        keylife = "20m";
-        rekeymargin = "3m";
-        keyingtries = "%forever";
-
         fragmentation = "yes";
         rekey = "yes";
       };
