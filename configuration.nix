@@ -22,6 +22,9 @@ in
       allowedTCPPorts = [ 5173 4173 ];
       allowedUDPPorts = [ 500 4500 ];
     };
+    extraHosts = ''
+      127.0.0.1 caddy.localhost
+    '';
   };
 
   # Enable and configure Strongswan
