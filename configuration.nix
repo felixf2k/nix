@@ -137,6 +137,7 @@ in
       nextcloud-talk-desktop
       obsidian
       vscode
+      discord
       # pkgs.kitty # required for the default Hyprland config
     ];
   };

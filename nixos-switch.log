@@ -2,16 +2,432 @@ building Nix...
 building the system configuration...
 evaluation warning: The option `services.xserver.xkbVariant' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
 evaluation warning: The option `services.xserver.layout' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
-these 4 derivations will be built:
-  /nix/store/gmahmgi27cmj4pl36hhmwdb0ih2r2558-extra-hosts.drv
-  /nix/store/cc46rnfhcix2r0rma81x4mqa7iv959qh-hosts.drv
-  /nix/store/2whn5jrvbvm5lz7iblbf554jkzmv7g74-etc.drv
-  /nix/store/264sksrj8vrnyy9jym08zk83is8d280i-nixos-system-laptop-24.11.713790.2b4230bf03de.drv
-building '/nix/store/gmahmgi27cmj4pl36hhmwdb0ih2r2558-extra-hosts.drv'...
-building '/nix/store/cc46rnfhcix2r0rma81x4mqa7iv959qh-hosts.drv'...
-building '/nix/store/2whn5jrvbvm5lz7iblbf554jkzmv7g74-etc.drv'...
-building '/nix/store/264sksrj8vrnyy9jym08zk83is8d280i-nixos-system-laptop-24.11.713790.2b4230bf03de.drv'...
+these 7 derivations will be built:
+  /nix/store/c84ps7y6pnab97rii40pp8mldd5v2qny-disable-breaking-updates.py.drv
+  /nix/store/jla08i168s6n1hmdanxnrl7dc125422g-discord.desktop.drv
+  /nix/store/zym4hvg9whs33pknxk3wiz4ywjagk04a-discord-0.0.81.tar.gz.drv
+  /nix/store/ni6qgvmi1mm78i8vwzpa6a2lasg8gpx9-discord-0.0.81.drv
+  /nix/store/iigpz1v6y2p8g4bshcxazddv7cakxnsm-user-environment.drv
+  /nix/store/i2mnjw38m8344ja6yb29jbkj5bybwdyx-etc.drv
+  /nix/store/9jfr35yafzsz2anq15005cvpaf936ifz-nixos-system-laptop-24.11.713790.2b4230bf03de.drv
+these 4 paths will be fetched (1.00 MiB download, 6.97 MiB unpacked):
+  /nix/store/b0g2vqis4ayhhnh03w92dinq0mqkhz4r-dee-unstable-2017-06-16
+  /nix/store/154n6sfdlls2s195ssjv15sr0791d4ym-libappindicator-gtk3-12.10.1+20.10.20200706.1
+  /nix/store/5aw3grydyhr8lg7nkj75g8bijaz3qh2a-libcxx-18.1.8
+  /nix/store/55rxp5dn7mi5bb9nrhcaqk7g4hj8ffpj-libunity-unstable-2021-02-01
+copying path '/nix/store/5aw3grydyhr8lg7nkj75g8bijaz3qh2a-libcxx-18.1.8' from 'https://cache.nixos.org'...
+copying path '/nix/store/154n6sfdlls2s195ssjv15sr0791d4ym-libappindicator-gtk3-12.10.1+20.10.20200706.1' from 'https://cache.nixos.org'...
+building '/nix/store/jla08i168s6n1hmdanxnrl7dc125422g-discord.desktop.drv'...
+copying path '/nix/store/b0g2vqis4ayhhnh03w92dinq0mqkhz4r-dee-unstable-2017-06-16' from 'https://cache.nixos.org'...
+building '/nix/store/c84ps7y6pnab97rii40pp8mldd5v2qny-disable-breaking-updates.py.drv'...
+building '/nix/store/zym4hvg9whs33pknxk3wiz4ywjagk04a-discord-0.0.81.tar.gz.drv'...
+copying path '/nix/store/55rxp5dn7mi5bb9nrhcaqk7g4hj8ffpj-libunity-unstable-2021-02-01' from 'https://cache.nixos.org'...
+
+trying https://stable.dl2.discordapp.net/apps/linux/0.0.81/discord-0.0.81.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 97.1M  100 97.1M    0     0  22.6M      0  0:00:04  0:00:04 --:--:-- 22.6M
+building '/nix/store/ni6qgvmi1mm78i8vwzpa6a2lasg8gpx9-discord-0.0.81.drv'...
+Running phase: unpackPhase
+unpacking source archive /nix/store/j5y58f42njgwaxipjvixjdqw4mlmj62l-discord-0.0.81.tar.gz
+source root is Discord
+setting SOURCE_DATE_EPOCH to timestamp 1737566569 of file Discord/postinst.sh
+Running phase: patchPhase
+Running phase: updateAutotoolsGnuConfigScriptsPhase
+Running phase: configurePhase
+no configure script, doing nothing
+Running phase: buildPhase
+no Makefile or custom buildPhase, doing nothing
+Running phase: glibPreInstallPhase
+Running phase: glibPreInstallPhase
+Running phase: installPhase
+Running phase: glibPreFixupPhase
+Running phase: glibPreFixupPhase
+Running phase: gappsWrapperArgsHook
+Running phase: dropIconThemeCache
+Running phase: dropIconThemeCache
+Running phase: fixupPhase
+shrinking RPATHs of ELF executables and libraries in /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81
+shrinking /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/chrome-sandbox
+shrinking /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/libffmpeg.so
+shrinking /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/libvk_swiftshader.so
+shrinking /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/libEGL.so
+shrinking /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/chrome_crashpad_handler
+shrinking /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/libGLESv2.so
+shrinking /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/.Discord-wrapped
+shrinking /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/libvulkan.so.1
+checking for references to /build/ in /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81...
+patching script interpreter paths in /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81
+/nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/postinst.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/gwgqdl0242ymlikq9s9s62gkp5cvyal3-bash-5.2p37/bin/sh"
+stripping (with command strip and flags -S -p) in  /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/bin
+automatically fixing dependencies for ELF files
+{'append_rpaths': [],
+ 'extra_args': [],
+ 'ignore_missing': [],
+ 'keep_libc': False,
+ 'libs': [PosixPath('/nix/store/midcxccr0l1izcv48bpm4pj5wjgy34lc-alsa-lib-1.2.12-dev/lib'),
+          PosixPath('/nix/store/p4mjdx6l2q4ff3ssjwh989rlw4xwljb7-alsa-lib-1.2.12/lib'),
+          PosixPath('/nix/store/3jzr6rnp46kscz7vxanjn5ri12q6hqcd-auto-patchelf-hook/lib'),
+          PosixPath('/nix/store/bxhckqxylrkykwbahjf57svssn3avdzk-auto-patchelf-0-unstable-2024-08-14/lib'),
+          PosixPath('/nix/store/wd1dlav3z5vwwv6yqj69xkzhldk5hpvb-binutils-wrapper-2.43.1/lib'),
+          PosixPath('/nix/store/jdgfa4j67zmzcys94cpd4w4sg9mnj2zb-cups-2.4.11-dev/lib'),
+          PosixPath('/nix/store/awr474gcqxa74764fkx8yvljlp09xp12-gmp-with-cxx-6.3.0-dev/lib'),
+          PosixPath('/nix/store/cpyk8ksm7c79l0nabd576s80wngdzix5-gmp-with-cxx-6.3.0/lib'),
+          PosixPath('/nix/store/31dwqk5iffa3za4jyzavck8rgdzi1fc7-cups-2.4.11-lib/lib'),
+          PosixPath('/nix/store/06zcy9nwyg596hn3x65jbd1mbmyy3p9y-cups-2.4.11/lib'),
+          PosixPath('/nix/store/yq7i832byydy3nplap2krh6nbvrd5q3j-libdrm-2.4.123-dev/lib'),
+          PosixPath('/nix/store/6h80x85cfzan40ngkv7x0vf71rqa0i7k-libdrm-2.4.123-bin/lib'),
+          PosixPath('/nix/store/4y9y64430fa00h4k30j29kjvb66231d7-libdrm-2.4.123/lib'),
+          PosixPath('/nix/store/3xcdg792jg5fdncjy3ggajjdg229qghj-util-linux-minimal-2.39.4-dev/lib'),
+          PosixPath('/nix/store/kqiznrjpaakanbrxhnq279slxxvawjzp-util-linux-minimal-2.39.4-bin/lib'),
+          PosixPath('/nix/store/qmn58s05ay763vzi7vxax0a6kw37gyjq-util-linux-minimal-2.39.4-lib/lib'),
+          PosixPath('/nix/store/rdiq2las0gswwsq2ww6m023r1dycwiws-libXdamage-1.1.6-dev/lib'),
+          PosixPath('/nix/store/gmnr6a33dbr978p4dzc8ck589z4ddwm2-libXfixes-6.0.1-dev/lib'),
+          PosixPath('/nix/store/ji427fnv38rcyh2m6z3hl3cc9ygmlhb0-libXfixes-6.0.1/lib'),
+          PosixPath('/nix/store/m6r497vlxbki4fpivgzr3hpzhbc5hips-libXdamage-1.1.6/lib'),
+          PosixPath('/nix/store/2nq19mwkgxmb9npqb4vb7gzs3inpvs3x-libX11-1.8.10-dev/lib'),
+          PosixPath('/nix/store/x79ks3lk3a6d4z6bsma21fx04vrp0nqd-xorgproto-2024.1/lib'),
+          PosixPath('/nix/store/94pix4pzamq3svx4jxjj2sgrvafn29b8-libxcb-1.17.0-dev/lib'),
+          PosixPath('/nix/store/c25p9xs9n6grwx4i4l4kmz09scgcav4b-libxcb-1.17.0/lib'),
+          PosixPath('/nix/store/zcq4irdcgn3ljqdnlpm2zjp7f1kw9jvm-libX11-1.8.10/lib'),
+          PosixPath('/nix/store/5d6m996mb176kn36a5qy8q5hlnf2j28j-libXScrnSaver-1.2.4/lib'),
+          PosixPath('/nix/store/pvyhq3ar7rg9wvc9j5mpw3a23d8i7fr5-libXtst-1.2.5/lib'),
+          PosixPath('/nix/store/pwfjx1j1is41m5pmzkg49sabfl2bjc9m-libxshmfence-1.3.2-dev/lib'),
+          PosixPath('/nix/store/qv14pgbg5gshfbfq5zqdn0ydh4bam59i-libxshmfence-1.3.2/lib'),
+          PosixPath('/nix/store/2p65kxc74bs8g6hh20if757a7mg36snq-mesa-24.2.8-dev/lib'),
+          PosixPath('/nix/store/83f8jlgdm6yqwxlmx7dlyjzkazfz73js-mesa-24.2.8/lib'),
+          PosixPath('/nix/store/cl0yjjpzp93k43jpqli5p303dpdmxypq-nss-3.101.2-dev/lib'),
+          PosixPath('/nix/store/z5mb24wx99yrzj1i25l97hy4hphadjz8-nspr-4.36-dev/lib'),
+          PosixPath('/nix/store/a2x0fabcvf03kjqrj6dxnnsy1dzv5sk0-nspr-4.36/lib'),
+          PosixPath('/nix/store/zlz8azc10dnrq5pfwjb5pk2c7amxk8vk-nss-3.101.2/lib'),
+          PosixPath('/nix/store/hynav3ph5f1j2r70p82z21p5912b3kmk-wrap-gapps-hook/lib'),
+          PosixPath('/nix/store/vi2j2pqg0vcwrq9nv1lcxqr9czfbfza2-make-binary-wrapper-hook/lib'),
+          PosixPath('/nix/store/mxi53f9xhkshf3la64awqacfmx9ppkzw-die-hook/lib'),
+          PosixPath('/nix/store/aiqj94gcxjqdq8p172jvxkxwvqjljpg7-gtk+3-3.24.43-dev/lib'),
+          PosixPath('/nix/store/1bgsdxv3smy1nw5754pxrhn5dg2kdiwd-at-spi2-core-2.54.0-dev/lib'),
+          PosixPath('/nix/store/f285z91jd3k5cl64bca5vxxrfam67y9d-dbus-1.14.10-dev/lib'),
+          PosixPath('/nix/store/md2jp5g37y009lp72dg47cxaycdyff79-expat-2.6.4-dev/lib'),
+          PosixPath('/nix/store/dl2q06nxjxz7b2dmpkrvjzdyk0plpxhs-expat-2.6.4/lib'),
+          PosixPath('/nix/store/la3w078ipfi6l985lrfrgckvx2c4lkff-dbus-1.14.10-lib/lib'),
+          PosixPath('/nix/store/af9ngaf6xzm44506ycw8fdnxkwib2s7p-dbus-1.14.10/lib'),
+          PosixPath('/nix/store/xslbksjj97g6nagcx4n5maj9fpvnyhvs-glib-2.82.1-dev/lib'),
+          PosixPath('/nix/store/06q0p7bhn2ffxxya20rrfqdib3h32csn-zlib-1.3.1-dev/lib'),
+          PosixPath('/nix/store/l5g2v1jgfyf3j0jp9iv5b79fi8yrwzpp-zlib-1.3.1/lib'),
+          PosixPath('/nix/store/30gl46y1afg6crvcw9v3ipb6hmkmd7hj-libffi-3.4.6-dev/lib'),
+          PosixPath('/nix/store/6pak77li0iw9x0b3yhmbjvp846w3p6bx-libffi-3.4.6/lib'),
+          PosixPath('/nix/store/7pls6w3nqphhg33sfwr8yipdf4wlr1mp-gettext-0.21.1/lib'),
+          PosixPath('/nix/store/32mnhais5wq08yxzg7ppbm22isfhpy6y-glibc-iconv-2.40/lib'),
+          PosixPath('/nix/store/c3zpspr0nip745xi4mayxjv4ykrx87yy-glib-2.82.1-bin/lib'),
+          PosixPath('/nix/store/6qkwbcx4q47dq4scz7rk4f3nlbr5937r-glib-2.82.1/lib'),
+          PosixPath('/nix/store/yxv2diq8wpyvmi7dgjp0lqjbcl1y6236-at-spi2-core-2.54.0/lib'),
+          PosixPath('/nix/store/i0cscyjikhzvmjh8r4ccaw8d79ajim07-cairo-1.18.2-dev/lib'),
+          PosixPath('/nix/store/6539h3f4yxsz5h9h44dawahm90i8ajiz-fontconfig-2.15.0-dev/lib'),
+          PosixPath('/nix/store/8b0mc01h0flnpfc102g19xwx1ix97k42-freetype-2.13.3-dev/lib'),
+          PosixPath('/nix/store/bvf477jxly4jm91w0n7aggvd3fldg6cp-bzip2-1.0.8-dev/lib'),
+          PosixPath('/nix/store/1yyryxp7mh7zsciapi8f1n0mnxkigmf8-bzip2-1.0.8-bin/lib'),
+          PosixPath('/nix/store/cp24rhch20cbns9c9jsw7b6h78rlci3z-bzip2-1.0.8/lib'),
+          PosixPath('/nix/store/dm4fbs83adpy2k98cjwiaggwrjb3vq1w-brotli-1.1.0-dev/lib'),
+          PosixPath('/nix/store/m70hxn0ph0gc3gnvkpjb9631655nnw6z-brotli-1.1.0-lib/lib'),
+          PosixPath('/nix/store/cq1b3vjfyb5wq7ag0kv416cns6lqnp0v-brotli-1.1.0/lib'),
+          PosixPath('/nix/store/rj95sph771w8mavzy4w5zcvhcfms16n9-libpng-apng-1.6.43-dev/lib'),
+          PosixPath('/nix/store/1mldak8ls62za08yckviy3zfpzim4aiz-libpng-apng-1.6.43/lib'),
+          PosixPath('/nix/store/49i3byz2r6q1dw30byvhxr8lm5bix851-freetype-2.13.3/lib'),
+          PosixPath('/nix/store/6zm19a1d8j9xc8lp7hvjmis4wir7h8yk-fontconfig-2.15.0-bin/lib'),
+          PosixPath('/nix/store/237d65an1lwn51jldg7m598b2z4pna5b-fontconfig-2.15.0-lib/lib'),
+          PosixPath('/nix/store/jdki5cbr5zdqg4b909r0bkhp232rzvx6-pixman-0.43.4/lib'),
+          PosixPath('/nix/store/sj3jfnpd35rv18z9b1gcjqzjgvff5hq6-libXext-1.3.6-dev/lib'),
+          PosixPath('/nix/store/y5yr09v8mph0lq610sla6c0z2j438ppi-libXau-1.0.11-dev/lib'),
+          PosixPath('/nix/store/6a49zj2wva8nxw7sidw9j9bp2nifscbw-libXau-1.0.11/lib'),
+          PosixPath('/nix/store/hi1mbz7s24l63w1m9sy9ynl8yjvb2f46-libXext-1.3.6/lib'),
+          PosixPath('/nix/store/xw159a07hd1z48pdkzv65l60j474z9p1-libXrender-0.9.11-dev/lib'),
+          PosixPath('/nix/store/bnfmimcfan36gg0g488c5hksg8nyr16y-libXrender-0.9.11/lib'),
+          PosixPath('/nix/store/fpxwbc130qcbyzsv5a4qr59jhnlv9q3a-cairo-1.18.2/lib'),
+          PosixPath('/nix/store/2pg462hys4799azv54r10nxa26q9lrny-fribidi-1.0.16-dev/lib'),
+          PosixPath('/nix/store/f6jbyw1asccf3w09w3p05dyb8f4s2zbp-fribidi-1.0.16/lib'),
+          PosixPath('/nix/store/7y6mgwrjkfs82sscds2fpzl2ydn3pg0z-gdk-pixbuf-2.42.12-dev/lib'),
+          PosixPath('/nix/store/hxi6hmgmvgyjnjakfpgxvc5zg81r0cql-libtiff-4.7.0-dev/lib'),
+          PosixPath('/nix/store/1j2kwh41dw79w8yzi19lwjypd9kriwhd-libdeflate-1.22/lib'),
+          PosixPath('/nix/store/pz9zkq8vjwv2gs2ijlpf4nm1isclmgz3-libjpeg-turbo-3.0.4-dev/lib'),
+          PosixPath('/nix/store/j1niz9mn9p32brkra7irkxkk4w1ynh9w-libjpeg-turbo-3.0.4-bin/lib'),
+          PosixPath('/nix/store/pz8mx3wwrp6gd95acwlx4kzwmyihvgch-libjpeg-turbo-3.0.4/lib'),
+          PosixPath('/nix/store/6f7bjr7j8fn44x1qk1kww44r1zzp2sn6-libwebp-1.4.0/lib'),
+          PosixPath('/nix/store/vx5d85si3jm438wqc4q34qs43bcrnswc-xz-5.6.3-dev/lib'),
+          PosixPath('/nix/store/4i4mjaf7z6gddspar487grxk5k1j4dcd-xz-5.6.3-bin/lib'),
+          PosixPath('/nix/store/bmzls7bipx954xsnbgshh8kbi488zy5m-xz-5.6.3/lib'),
+          PosixPath('/nix/store/p5qx2l3ygricv44vkra2qppi38kj8q03-zstd-1.5.6-dev/lib'),
+          PosixPath('/nix/store/qpmg2piws75wmy1619ryh0dhwi9638ni-zstd-1.5.6-bin/lib'),
+          PosixPath('/nix/store/afdaxacrxy5jgh5pmm3a2xn3hny6wdq7-zstd-1.5.6/lib'),
+          PosixPath('/nix/store/lqfiz5gbfmqrg9860sr82cnxcyvzhbp0-libtiff-4.7.0-bin/lib'),
+          PosixPath('/nix/store/ay653ngjfvkcp286bgh17c3la54cgy7h-libtiff-4.7.0/lib'),
+          PosixPath('/nix/store/dlq0sl1589r70shf2q1l4v7gk2d3zzl0-gdk-pixbuf-2.42.12/lib'),
+          PosixPath('/nix/store/7dlg43i87gz0ayn05nj3qkxsx2l6cd2q-gsettings-desktop-schemas-47.1/lib'),
+          PosixPath('/nix/store/s3fhdiwyahn0090bbb67qdnb92v6ca89-libICE-1.1.1-dev/lib'),
+          PosixPath('/nix/store/a9wyj41d8nis9jwqm71k8ssp2by2c420-libICE-1.1.1/lib'),
+          PosixPath('/nix/store/qbgg6jkmlsdn0wl2jszabjxb6rjgvy0i-libSM-1.2.4-dev/lib'),
+          PosixPath('/nix/store/7r2x1qjnxdhpgs74y19im0s39x7ak69y-libSM-1.2.4/lib'),
+          PosixPath('/nix/store/yvfldqm9qvvlr484ylx184azjq1pq7mg-libXcomposite-0.4.6-dev/lib'),
+          PosixPath('/nix/store/b9yx3c2ny9kh4vxmqxnpm355wmzfvc5v-libXcomposite-0.4.6/lib'),
+          PosixPath('/nix/store/4nib5gpv4ckmy9w2drj4g99bx5v0xxz5-libXcursor-1.2.2-dev/lib'),
+          PosixPath('/nix/store/x9y3nsv92pqbwy9h4ndvvy5vyi1dyhrz-libXcursor-1.2.2/lib'),
+          PosixPath('/nix/store/npvyfw89qr7lyv03ng79bmrdc0bz2wly-libXi-1.8.2-dev/lib'),
+          PosixPath('/nix/store/la9dj8xid9s5702i8q6722j5hbwqg5ym-libXi-1.8.2/lib'),
+          PosixPath('/nix/store/9fyv534c1xp8rvx51zz3jv49cnxalydc-libXrandr-1.5.4-dev/lib'),
+          PosixPath('/nix/store/k4wbhldwg6lfsiaxmp6fjzma8qdh3vm5-libXrandr-1.5.4/lib'),
+          PosixPath('/nix/store/xyvlz999cggyydy6lg95jksrf9dmk268-pango-1.54.0-dev/lib'),
+          PosixPath('/nix/store/lzk4rzrq285sr496i771m5x0nvfh3114-harfbuzz-10.0.1-dev/lib'),
+          PosixPath('/nix/store/0lpfr8bcfgyg4ksaa7af3rmw148sn78y-graphite2-1.3.14-dev/lib'),
+          PosixPath('/nix/store/k8i3z48g47dba6yc6rlp2xfksgy6gmcn-graphite2-1.3.14/lib'),
+          PosixPath('/nix/store/jsg02pmrjzdmvf6lxn9g74yngb2v44qx-harfbuzz-10.0.1/lib'),
+          PosixPath('/nix/store/2cknz1p4wzpc462r8xlwq65d65mh7yny-libXft-2.3.8-dev/lib'),
+          PosixPath('/nix/store/c046chc0hp16n75lkn8pbdbbylwdndxz-libXft-2.3.8/lib'),
+          PosixPath('/nix/store/9s4qaaizqnfb2z38yl906l810p407f7v-pango-1.54.0-bin/lib'),
+          PosixPath('/nix/store/d11ikp74xfv8jn2h791hpirfz2qqm2a3-pango-1.54.0/lib'),
+          PosixPath('/nix/store/13fw0scdl9ciz5lpabi9nkxwrnn8555g-libglvnd-1.7.0-dev/lib'),
+          PosixPath('/nix/store/kynlrr98p2c235b00c72b14apn7l8l4y-libglvnd-1.7.0/lib'),
+          PosixPath('/nix/store/4cv0lxdkwwr8qrl7szgbdaj88l8sbl2j-wayland-1.23.1-dev/lib'),
+          PosixPath('/nix/store/lm734xz8svrfjys4bz6v3lbl73yf9qgp-wayland-1.23.1/lib'),
+          PosixPath('/nix/store/wf593y0vvk9wzvff3pa8vdfc0lrmwahg-wayland-protocols-1.38/lib'),
+          PosixPath('/nix/store/k53lmh232zhcm5mf1gg717cj8aqmc65a-libXinerama-1.1.5-dev/lib'),
+          PosixPath('/nix/store/zira3fpxs12ayza4np2kq8dpgdlxk3xh-libXinerama-1.1.5/lib'),
+          PosixPath('/nix/store/l9byw3fs59qb3m8wkvchjgii70v26d2s-gtk+3-3.24.43/lib'),
+          PosixPath('/nix/store/1hdzn73hfcwjkyzvj5pnz7fb04p64fl9-librsvg-2.58.3-dev/lib'),
+          PosixPath('/nix/store/3i24agm03wmglwbyk0mg8d6wa7w7l214-librsvg-2.58.3/lib'),
+          PosixPath('/nix/store/3ibs1c03k683g2vv2rii60476w690xs3-make-shell-wrapper-hook/lib'),
+          PosixPath('/nix/store/wnl9qpnhayry14lhcbdafhadsjwsdr6p-patchelf-0.15.0/lib'),
+          PosixPath('/nix/store/ap724yhgv28mpsi1mmqcwypj4rrfhqmg-update-autotools-gnu-config-scripts-hook/lib'),
+          PosixPath('/nix/store/h9lc1dpi14z7is86ffhl3ld569138595-audit-tmpdir.sh/lib'),
+          PosixPath('/nix/store/m54bmrhj6fqz8nds5zcj97w9s9bckc9v-compress-man-pages.sh/lib'),
+          PosixPath('/nix/store/wgrbkkaldkrlrni33ccvm3b6vbxzb656-make-symlinks-relative.sh/lib'),
+          PosixPath('/nix/store/5yzw0vhkyszf2d179m0qfkgxmp5wjjx4-move-docs.sh/lib'),
+          PosixPath('/nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh/lib'),
+          PosixPath('/nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh/lib'),
+          PosixPath('/nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh/lib'),
+          PosixPath('/nix/store/jivxp510zxakaaic7qkrb7v1dd2rdbw9-multiple-outputs.sh/lib'),
+          PosixPath('/nix/store/12lvf0c7xric9cny7slvf9cmhypl1p67-patch-shebangs.sh/lib'),
+          PosixPath('/nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh/lib'),
+          PosixPath('/nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh/lib'),
+          PosixPath('/nix/store/aazf105snicrlvyzzbdj85sx4179rpfp-set-source-date-epoch-to-latest.sh/lib'),
+          PosixPath('/nix/store/gps9qrh99j7g02840wv5x78ykmz30byp-strip.sh/lib'),
+          PosixPath('/nix/store/888bkaqdpfpx72dd8bdc69qsqlgbhcvf-gcc-wrapper-13.3.0/lib'),
+          PosixPath('/nix/store/qlzvmgr8w9prdlyys7irqf86p7bndf5b-binutils-wrapper-2.43.1/lib'),
+          PosixPath('/nix/store/lzcxvhh3wbd5fblh25hbs8jmdqknv39j-dconf-0.40.0-lib/lib'),
+          PosixPath('/nix/store/midcxccr0l1izcv48bpm4pj5wjgy34lc-alsa-lib-1.2.12-dev/lib'),
+          PosixPath('/nix/store/p4mjdx6l2q4ff3ssjwh989rlw4xwljb7-alsa-lib-1.2.12/lib'),
+          PosixPath('/nix/store/3jzr6rnp46kscz7vxanjn5ri12q6hqcd-auto-patchelf-hook/lib'),
+          PosixPath('/nix/store/bxhckqxylrkykwbahjf57svssn3avdzk-auto-patchelf-0-unstable-2024-08-14/lib'),
+          PosixPath('/nix/store/wd1dlav3z5vwwv6yqj69xkzhldk5hpvb-binutils-wrapper-2.43.1/lib'),
+          PosixPath('/nix/store/jdgfa4j67zmzcys94cpd4w4sg9mnj2zb-cups-2.4.11-dev/lib'),
+          PosixPath('/nix/store/awr474gcqxa74764fkx8yvljlp09xp12-gmp-with-cxx-6.3.0-dev/lib'),
+          PosixPath('/nix/store/cpyk8ksm7c79l0nabd576s80wngdzix5-gmp-with-cxx-6.3.0/lib'),
+          PosixPath('/nix/store/31dwqk5iffa3za4jyzavck8rgdzi1fc7-cups-2.4.11-lib/lib'),
+          PosixPath('/nix/store/06zcy9nwyg596hn3x65jbd1mbmyy3p9y-cups-2.4.11/lib'),
+          PosixPath('/nix/store/yq7i832byydy3nplap2krh6nbvrd5q3j-libdrm-2.4.123-dev/lib'),
+          PosixPath('/nix/store/6h80x85cfzan40ngkv7x0vf71rqa0i7k-libdrm-2.4.123-bin/lib'),
+          PosixPath('/nix/store/4y9y64430fa00h4k30j29kjvb66231d7-libdrm-2.4.123/lib'),
+          PosixPath('/nix/store/3xcdg792jg5fdncjy3ggajjdg229qghj-util-linux-minimal-2.39.4-dev/lib'),
+          PosixPath('/nix/store/kqiznrjpaakanbrxhnq279slxxvawjzp-util-linux-minimal-2.39.4-bin/lib'),
+          PosixPath('/nix/store/qmn58s05ay763vzi7vxax0a6kw37gyjq-util-linux-minimal-2.39.4-lib/lib'),
+          PosixPath('/nix/store/rdiq2las0gswwsq2ww6m023r1dycwiws-libXdamage-1.1.6-dev/lib'),
+          PosixPath('/nix/store/gmnr6a33dbr978p4dzc8ck589z4ddwm2-libXfixes-6.0.1-dev/lib'),
+          PosixPath('/nix/store/ji427fnv38rcyh2m6z3hl3cc9ygmlhb0-libXfixes-6.0.1/lib'),
+          PosixPath('/nix/store/m6r497vlxbki4fpivgzr3hpzhbc5hips-libXdamage-1.1.6/lib'),
+          PosixPath('/nix/store/2nq19mwkgxmb9npqb4vb7gzs3inpvs3x-libX11-1.8.10-dev/lib'),
+          PosixPath('/nix/store/x79ks3lk3a6d4z6bsma21fx04vrp0nqd-xorgproto-2024.1/lib'),
+          PosixPath('/nix/store/94pix4pzamq3svx4jxjj2sgrvafn29b8-libxcb-1.17.0-dev/lib'),
+          PosixPath('/nix/store/c25p9xs9n6grwx4i4l4kmz09scgcav4b-libxcb-1.17.0/lib'),
+          PosixPath('/nix/store/zcq4irdcgn3ljqdnlpm2zjp7f1kw9jvm-libX11-1.8.10/lib'),
+          PosixPath('/nix/store/5d6m996mb176kn36a5qy8q5hlnf2j28j-libXScrnSaver-1.2.4/lib'),
+          PosixPath('/nix/store/pvyhq3ar7rg9wvc9j5mpw3a23d8i7fr5-libXtst-1.2.5/lib'),
+          PosixPath('/nix/store/pwfjx1j1is41m5pmzkg49sabfl2bjc9m-libxshmfence-1.3.2-dev/lib'),
+          PosixPath('/nix/store/qv14pgbg5gshfbfq5zqdn0ydh4bam59i-libxshmfence-1.3.2/lib'),
+          PosixPath('/nix/store/2p65kxc74bs8g6hh20if757a7mg36snq-mesa-24.2.8-dev/lib'),
+          PosixPath('/nix/store/83f8jlgdm6yqwxlmx7dlyjzkazfz73js-mesa-24.2.8/lib'),
+          PosixPath('/nix/store/cl0yjjpzp93k43jpqli5p303dpdmxypq-nss-3.101.2-dev/lib'),
+          PosixPath('/nix/store/z5mb24wx99yrzj1i25l97hy4hphadjz8-nspr-4.36-dev/lib'),
+          PosixPath('/nix/store/a2x0fabcvf03kjqrj6dxnnsy1dzv5sk0-nspr-4.36/lib'),
+          PosixPath('/nix/store/zlz8azc10dnrq5pfwjb5pk2c7amxk8vk-nss-3.101.2/lib'),
+          PosixPath('/nix/store/hynav3ph5f1j2r70p82z21p5912b3kmk-wrap-gapps-hook/lib'),
+          PosixPath('/nix/store/vi2j2pqg0vcwrq9nv1lcxqr9czfbfza2-make-binary-wrapper-hook/lib'),
+          PosixPath('/nix/store/mxi53f9xhkshf3la64awqacfmx9ppkzw-die-hook/lib'),
+          PosixPath('/nix/store/aiqj94gcxjqdq8p172jvxkxwvqjljpg7-gtk+3-3.24.43-dev/lib'),
+          PosixPath('/nix/store/1bgsdxv3smy1nw5754pxrhn5dg2kdiwd-at-spi2-core-2.54.0-dev/lib'),
+          PosixPath('/nix/store/f285z91jd3k5cl64bca5vxxrfam67y9d-dbus-1.14.10-dev/lib'),
+          PosixPath('/nix/store/md2jp5g37y009lp72dg47cxaycdyff79-expat-2.6.4-dev/lib'),
+          PosixPath('/nix/store/dl2q06nxjxz7b2dmpkrvjzdyk0plpxhs-expat-2.6.4/lib'),
+          PosixPath('/nix/store/la3w078ipfi6l985lrfrgckvx2c4lkff-dbus-1.14.10-lib/lib'),
+          PosixPath('/nix/store/af9ngaf6xzm44506ycw8fdnxkwib2s7p-dbus-1.14.10/lib'),
+          PosixPath('/nix/store/xslbksjj97g6nagcx4n5maj9fpvnyhvs-glib-2.82.1-dev/lib'),
+          PosixPath('/nix/store/06q0p7bhn2ffxxya20rrfqdib3h32csn-zlib-1.3.1-dev/lib'),
+          PosixPath('/nix/store/l5g2v1jgfyf3j0jp9iv5b79fi8yrwzpp-zlib-1.3.1/lib'),
+          PosixPath('/nix/store/30gl46y1afg6crvcw9v3ipb6hmkmd7hj-libffi-3.4.6-dev/lib'),
+          PosixPath('/nix/store/6pak77li0iw9x0b3yhmbjvp846w3p6bx-libffi-3.4.6/lib'),
+          PosixPath('/nix/store/7pls6w3nqphhg33sfwr8yipdf4wlr1mp-gettext-0.21.1/lib'),
+          PosixPath('/nix/store/32mnhais5wq08yxzg7ppbm22isfhpy6y-glibc-iconv-2.40/lib'),
+          PosixPath('/nix/store/c3zpspr0nip745xi4mayxjv4ykrx87yy-glib-2.82.1-bin/lib'),
+          PosixPath('/nix/store/6qkwbcx4q47dq4scz7rk4f3nlbr5937r-glib-2.82.1/lib'),
+          PosixPath('/nix/store/yxv2diq8wpyvmi7dgjp0lqjbcl1y6236-at-spi2-core-2.54.0/lib'),
+          PosixPath('/nix/store/i0cscyjikhzvmjh8r4ccaw8d79ajim07-cairo-1.18.2-dev/lib'),
+          PosixPath('/nix/store/6539h3f4yxsz5h9h44dawahm90i8ajiz-fontconfig-2.15.0-dev/lib'),
+          PosixPath('/nix/store/8b0mc01h0flnpfc102g19xwx1ix97k42-freetype-2.13.3-dev/lib'),
+          PosixPath('/nix/store/bvf477jxly4jm91w0n7aggvd3fldg6cp-bzip2-1.0.8-dev/lib'),
+          PosixPath('/nix/store/1yyryxp7mh7zsciapi8f1n0mnxkigmf8-bzip2-1.0.8-bin/lib'),
+          PosixPath('/nix/store/cp24rhch20cbns9c9jsw7b6h78rlci3z-bzip2-1.0.8/lib'),
+          PosixPath('/nix/store/dm4fbs83adpy2k98cjwiaggwrjb3vq1w-brotli-1.1.0-dev/lib'),
+          PosixPath('/nix/store/m70hxn0ph0gc3gnvkpjb9631655nnw6z-brotli-1.1.0-lib/lib'),
+          PosixPath('/nix/store/cq1b3vjfyb5wq7ag0kv416cns6lqnp0v-brotli-1.1.0/lib'),
+          PosixPath('/nix/store/rj95sph771w8mavzy4w5zcvhcfms16n9-libpng-apng-1.6.43-dev/lib'),
+          PosixPath('/nix/store/1mldak8ls62za08yckviy3zfpzim4aiz-libpng-apng-1.6.43/lib'),
+          PosixPath('/nix/store/49i3byz2r6q1dw30byvhxr8lm5bix851-freetype-2.13.3/lib'),
+          PosixPath('/nix/store/6zm19a1d8j9xc8lp7hvjmis4wir7h8yk-fontconfig-2.15.0-bin/lib'),
+          PosixPath('/nix/store/237d65an1lwn51jldg7m598b2z4pna5b-fontconfig-2.15.0-lib/lib'),
+          PosixPath('/nix/store/jdki5cbr5zdqg4b909r0bkhp232rzvx6-pixman-0.43.4/lib'),
+          PosixPath('/nix/store/sj3jfnpd35rv18z9b1gcjqzjgvff5hq6-libXext-1.3.6-dev/lib'),
+          PosixPath('/nix/store/y5yr09v8mph0lq610sla6c0z2j438ppi-libXau-1.0.11-dev/lib'),
+          PosixPath('/nix/store/6a49zj2wva8nxw7sidw9j9bp2nifscbw-libXau-1.0.11/lib'),
+          PosixPath('/nix/store/hi1mbz7s24l63w1m9sy9ynl8yjvb2f46-libXext-1.3.6/lib'),
+          PosixPath('/nix/store/xw159a07hd1z48pdkzv65l60j474z9p1-libXrender-0.9.11-dev/lib'),
+          PosixPath('/nix/store/bnfmimcfan36gg0g488c5hksg8nyr16y-libXrender-0.9.11/lib'),
+          PosixPath('/nix/store/fpxwbc130qcbyzsv5a4qr59jhnlv9q3a-cairo-1.18.2/lib'),
+          PosixPath('/nix/store/2pg462hys4799azv54r10nxa26q9lrny-fribidi-1.0.16-dev/lib'),
+          PosixPath('/nix/store/f6jbyw1asccf3w09w3p05dyb8f4s2zbp-fribidi-1.0.16/lib'),
+          PosixPath('/nix/store/7y6mgwrjkfs82sscds2fpzl2ydn3pg0z-gdk-pixbuf-2.42.12-dev/lib'),
+          PosixPath('/nix/store/hxi6hmgmvgyjnjakfpgxvc5zg81r0cql-libtiff-4.7.0-dev/lib'),
+          PosixPath('/nix/store/1j2kwh41dw79w8yzi19lwjypd9kriwhd-libdeflate-1.22/lib'),
+          PosixPath('/nix/store/pz9zkq8vjwv2gs2ijlpf4nm1isclmgz3-libjpeg-turbo-3.0.4-dev/lib'),
+          PosixPath('/nix/store/j1niz9mn9p32brkra7irkxkk4w1ynh9w-libjpeg-turbo-3.0.4-bin/lib'),
+          PosixPath('/nix/store/pz8mx3wwrp6gd95acwlx4kzwmyihvgch-libjpeg-turbo-3.0.4/lib'),
+          PosixPath('/nix/store/6f7bjr7j8fn44x1qk1kww44r1zzp2sn6-libwebp-1.4.0/lib'),
+          PosixPath('/nix/store/vx5d85si3jm438wqc4q34qs43bcrnswc-xz-5.6.3-dev/lib'),
+          PosixPath('/nix/store/4i4mjaf7z6gddspar487grxk5k1j4dcd-xz-5.6.3-bin/lib'),
+          PosixPath('/nix/store/bmzls7bipx954xsnbgshh8kbi488zy5m-xz-5.6.3/lib'),
+          PosixPath('/nix/store/p5qx2l3ygricv44vkra2qppi38kj8q03-zstd-1.5.6-dev/lib'),
+          PosixPath('/nix/store/qpmg2piws75wmy1619ryh0dhwi9638ni-zstd-1.5.6-bin/lib'),
+          PosixPath('/nix/store/afdaxacrxy5jgh5pmm3a2xn3hny6wdq7-zstd-1.5.6/lib'),
+          PosixPath('/nix/store/lqfiz5gbfmqrg9860sr82cnxcyvzhbp0-libtiff-4.7.0-bin/lib'),
+          PosixPath('/nix/store/ay653ngjfvkcp286bgh17c3la54cgy7h-libtiff-4.7.0/lib'),
+          PosixPath('/nix/store/dlq0sl1589r70shf2q1l4v7gk2d3zzl0-gdk-pixbuf-2.42.12/lib'),
+          PosixPath('/nix/store/7dlg43i87gz0ayn05nj3qkxsx2l6cd2q-gsettings-desktop-schemas-47.1/lib'),
+          PosixPath('/nix/store/s3fhdiwyahn0090bbb67qdnb92v6ca89-libICE-1.1.1-dev/lib'),
+          PosixPath('/nix/store/a9wyj41d8nis9jwqm71k8ssp2by2c420-libICE-1.1.1/lib'),
+          PosixPath('/nix/store/qbgg6jkmlsdn0wl2jszabjxb6rjgvy0i-libSM-1.2.4-dev/lib'),
+          PosixPath('/nix/store/7r2x1qjnxdhpgs74y19im0s39x7ak69y-libSM-1.2.4/lib'),
+          PosixPath('/nix/store/yvfldqm9qvvlr484ylx184azjq1pq7mg-libXcomposite-0.4.6-dev/lib'),
+          PosixPath('/nix/store/b9yx3c2ny9kh4vxmqxnpm355wmzfvc5v-libXcomposite-0.4.6/lib'),
+          PosixPath('/nix/store/4nib5gpv4ckmy9w2drj4g99bx5v0xxz5-libXcursor-1.2.2-dev/lib'),
+          PosixPath('/nix/store/x9y3nsv92pqbwy9h4ndvvy5vyi1dyhrz-libXcursor-1.2.2/lib'),
+          PosixPath('/nix/store/npvyfw89qr7lyv03ng79bmrdc0bz2wly-libXi-1.8.2-dev/lib'),
+          PosixPath('/nix/store/la9dj8xid9s5702i8q6722j5hbwqg5ym-libXi-1.8.2/lib'),
+          PosixPath('/nix/store/9fyv534c1xp8rvx51zz3jv49cnxalydc-libXrandr-1.5.4-dev/lib'),
+          PosixPath('/nix/store/k4wbhldwg6lfsiaxmp6fjzma8qdh3vm5-libXrandr-1.5.4/lib'),
+          PosixPath('/nix/store/xyvlz999cggyydy6lg95jksrf9dmk268-pango-1.54.0-dev/lib'),
+          PosixPath('/nix/store/lzk4rzrq285sr496i771m5x0nvfh3114-harfbuzz-10.0.1-dev/lib'),
+          PosixPath('/nix/store/0lpfr8bcfgyg4ksaa7af3rmw148sn78y-graphite2-1.3.14-dev/lib'),
+          PosixPath('/nix/store/k8i3z48g47dba6yc6rlp2xfksgy6gmcn-graphite2-1.3.14/lib'),
+          PosixPath('/nix/store/jsg02pmrjzdmvf6lxn9g74yngb2v44qx-harfbuzz-10.0.1/lib'),
+          PosixPath('/nix/store/2cknz1p4wzpc462r8xlwq65d65mh7yny-libXft-2.3.8-dev/lib'),
+          PosixPath('/nix/store/c046chc0hp16n75lkn8pbdbbylwdndxz-libXft-2.3.8/lib'),
+          PosixPath('/nix/store/9s4qaaizqnfb2z38yl906l810p407f7v-pango-1.54.0-bin/lib'),
+          PosixPath('/nix/store/d11ikp74xfv8jn2h791hpirfz2qqm2a3-pango-1.54.0/lib'),
+          PosixPath('/nix/store/13fw0scdl9ciz5lpabi9nkxwrnn8555g-libglvnd-1.7.0-dev/lib'),
+          PosixPath('/nix/store/kynlrr98p2c235b00c72b14apn7l8l4y-libglvnd-1.7.0/lib'),
+          PosixPath('/nix/store/4cv0lxdkwwr8qrl7szgbdaj88l8sbl2j-wayland-1.23.1-dev/lib'),
+          PosixPath('/nix/store/lm734xz8svrfjys4bz6v3lbl73yf9qgp-wayland-1.23.1/lib'),
+          PosixPath('/nix/store/wf593y0vvk9wzvff3pa8vdfc0lrmwahg-wayland-protocols-1.38/lib'),
+          PosixPath('/nix/store/k53lmh232zhcm5mf1gg717cj8aqmc65a-libXinerama-1.1.5-dev/lib'),
+          PosixPath('/nix/store/zira3fpxs12ayza4np2kq8dpgdlxk3xh-libXinerama-1.1.5/lib'),
+          PosixPath('/nix/store/l9byw3fs59qb3m8wkvchjgii70v26d2s-gtk+3-3.24.43/lib'),
+          PosixPath('/nix/store/1hdzn73hfcwjkyzvj5pnz7fb04p64fl9-librsvg-2.58.3-dev/lib'),
+          PosixPath('/nix/store/3i24agm03wmglwbyk0mg8d6wa7w7l214-librsvg-2.58.3/lib'),
+          PosixPath('/nix/store/3ibs1c03k683g2vv2rii60476w690xs3-make-shell-wrapper-hook/lib'),
+          PosixPath('/nix/store/wnl9qpnhayry14lhcbdafhadsjwsdr6p-patchelf-0.15.0/lib'),
+          PosixPath('/nix/store/ap724yhgv28mpsi1mmqcwypj4rrfhqmg-update-autotools-gnu-config-scripts-hook/lib'),
+          PosixPath('/nix/store/h9lc1dpi14z7is86ffhl3ld569138595-audit-tmpdir.sh/lib'),
+          PosixPath('/nix/store/m54bmrhj6fqz8nds5zcj97w9s9bckc9v-compress-man-pages.sh/lib'),
+          PosixPath('/nix/store/wgrbkkaldkrlrni33ccvm3b6vbxzb656-make-symlinks-relative.sh/lib'),
+          PosixPath('/nix/store/5yzw0vhkyszf2d179m0qfkgxmp5wjjx4-move-docs.sh/lib'),
+          PosixPath('/nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh/lib'),
+          PosixPath('/nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh/lib'),
+          PosixPath('/nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh/lib'),
+          PosixPath('/nix/store/jivxp510zxakaaic7qkrb7v1dd2rdbw9-multiple-outputs.sh/lib'),
+          PosixPath('/nix/store/12lvf0c7xric9cny7slvf9cmhypl1p67-patch-shebangs.sh/lib'),
+          PosixPath('/nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh/lib'),
+          PosixPath('/nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh/lib'),
+          PosixPath('/nix/store/aazf105snicrlvyzzbdj85sx4179rpfp-set-source-date-epoch-to-latest.sh/lib'),
+          PosixPath('/nix/store/gps9qrh99j7g02840wv5x78ykmz30byp-strip.sh/lib'),
+          PosixPath('/nix/store/888bkaqdpfpx72dd8bdc69qsqlgbhcvf-gcc-wrapper-13.3.0/lib'),
+          PosixPath('/nix/store/qlzvmgr8w9prdlyys7irqf86p7bndf5b-binutils-wrapper-2.43.1/lib'),
+          PosixPath('/nix/store/lzcxvhh3wbd5fblh25hbs8jmdqknv39j-dconf-0.40.0-lib/lib')],
+ 'paths': [PosixPath('/nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81')],
+ 'recursive': True,
+ 'runtime_dependencies': []}
+setting interpreter of /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/chrome-sandbox
+searching for dependencies of /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/chrome-sandbox
+searching for dependencies of /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/libffmpeg.so
+    libgcc_s.so.1 -> found: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+setting RPATH to: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+searching for dependencies of /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/libvk_swiftshader.so
+    libgcc_s.so.1 -> found: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+setting RPATH to: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+searching for dependencies of /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/libEGL.so
+    libgcc_s.so.1 -> found: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+setting RPATH to: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+setting interpreter of /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/chrome_crashpad_handler
+searching for dependencies of /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/chrome_crashpad_handler
+    libgcc_s.so.1 -> found: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+setting RPATH to: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+searching for dependencies of /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/libGLESv2.so
+    libX11.so.6 -> found: /nix/store/zcq4irdcgn3ljqdnlpm2zjp7f1kw9jvm-libX11-1.8.10/lib
+    libXext.so.6 -> found: /nix/store/hi1mbz7s24l63w1m9sy9ynl8yjvb2f46-libXext-1.3.6/lib
+    libxcb.so.1 -> found: /nix/store/c25p9xs9n6grwx4i4l4kmz09scgcav4b-libxcb-1.17.0/lib
+    libdrm.so.2 -> found: /nix/store/4y9y64430fa00h4k30j29kjvb66231d7-libdrm-2.4.123/lib
+    libgcc_s.so.1 -> found: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+setting RPATH to: /nix/store/zcq4irdcgn3ljqdnlpm2zjp7f1kw9jvm-libX11-1.8.10/lib:/nix/store/hi1mbz7s24l63w1m9sy9ynl8yjvb2f46-libXext-1.3.6/lib:/nix/store/c25p9xs9n6grwx4i4l4kmz09scgcav4b-libxcb-1.17.0/lib:/nix/store/4y9y64430fa00h4k30j29kjvb66231d7-libdrm-2.4.123/lib:/nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+setting interpreter of /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/.Discord-wrapped
+searching for dependencies of /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/.Discord-wrapped
+    libffmpeg.so -> found: /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord
+    libgobject-2.0.so.0 -> found: /nix/store/6qkwbcx4q47dq4scz7rk4f3nlbr5937r-glib-2.82.1/lib
+    libglib-2.0.so.0 -> found: /nix/store/6qkwbcx4q47dq4scz7rk4f3nlbr5937r-glib-2.82.1/lib
+    libgio-2.0.so.0 -> found: /nix/store/6qkwbcx4q47dq4scz7rk4f3nlbr5937r-glib-2.82.1/lib
+    libnss3.so -> found: /nix/store/zlz8azc10dnrq5pfwjb5pk2c7amxk8vk-nss-3.101.2/lib
+    libnssutil3.so -> found: /nix/store/zlz8azc10dnrq5pfwjb5pk2c7amxk8vk-nss-3.101.2/lib
+    libsmime3.so -> found: /nix/store/zlz8azc10dnrq5pfwjb5pk2c7amxk8vk-nss-3.101.2/lib
+    libnspr4.so -> found: /nix/store/a2x0fabcvf03kjqrj6dxnnsy1dzv5sk0-nspr-4.36/lib
+    libdbus-1.so.3 -> found: /nix/store/la3w078ipfi6l985lrfrgckvx2c4lkff-dbus-1.14.10-lib/lib
+    libatk-1.0.so.0 -> found: /nix/store/yxv2diq8wpyvmi7dgjp0lqjbcl1y6236-at-spi2-core-2.54.0/lib
+    libatk-bridge-2.0.so.0 -> found: /nix/store/yxv2diq8wpyvmi7dgjp0lqjbcl1y6236-at-spi2-core-2.54.0/lib
+    libdrm.so.2 -> found: /nix/store/4y9y64430fa00h4k30j29kjvb66231d7-libdrm-2.4.123/lib
+    libgtk-3.so.0 -> found: /nix/store/l9byw3fs59qb3m8wkvchjgii70v26d2s-gtk+3-3.24.43/lib
+    libpango-1.0.so.0 -> found: /nix/store/d11ikp74xfv8jn2h791hpirfz2qqm2a3-pango-1.54.0/lib
+    libcairo.so.2 -> found: /nix/store/fpxwbc130qcbyzsv5a4qr59jhnlv9q3a-cairo-1.18.2/lib
+    libX11.so.6 -> found: /nix/store/zcq4irdcgn3ljqdnlpm2zjp7f1kw9jvm-libX11-1.8.10/lib
+    libXcomposite.so.1 -> found: /nix/store/b9yx3c2ny9kh4vxmqxnpm355wmzfvc5v-libXcomposite-0.4.6/lib
+    libXdamage.so.1 -> found: /nix/store/m6r497vlxbki4fpivgzr3hpzhbc5hips-libXdamage-1.1.6/lib
+    libXext.so.6 -> found: /nix/store/hi1mbz7s24l63w1m9sy9ynl8yjvb2f46-libXext-1.3.6/lib
+    libXfixes.so.3 -> found: /nix/store/ji427fnv38rcyh2m6z3hl3cc9ygmlhb0-libXfixes-6.0.1/lib
+    libXrandr.so.2 -> found: /nix/store/k4wbhldwg6lfsiaxmp6fjzma8qdh3vm5-libXrandr-1.5.4/lib
+    libgbm.so.1 -> found: /nix/store/83f8jlgdm6yqwxlmx7dlyjzkazfz73js-mesa-24.2.8/lib
+    libexpat.so.1 -> found: /nix/store/dl2q06nxjxz7b2dmpkrvjzdyk0plpxhs-expat-2.6.4/lib
+    libxcb.so.1 -> found: /nix/store/c25p9xs9n6grwx4i4l4kmz09scgcav4b-libxcb-1.17.0/lib
+    libxkbcommon.so.0 -> found: /nix/store/9bjscsqnzkwyph3zdhajznn92h357r14-libxkbcommon-1.7.0/lib
+    libasound.so.2 -> found: /nix/store/p4mjdx6l2q4ff3ssjwh989rlw4xwljb7-alsa-lib-1.2.12/lib
+    libatspi.so.0 -> found: /nix/store/yxv2diq8wpyvmi7dgjp0lqjbcl1y6236-at-spi2-core-2.54.0/lib
+    libgcc_s.so.1 -> found: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+setting RPATH to: /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord:/nix/store/6qkwbcx4q47dq4scz7rk4f3nlbr5937r-glib-2.82.1/lib:/nix/store/zlz8azc10dnrq5pfwjb5pk2c7amxk8vk-nss-3.101.2/lib:/nix/store/a2x0fabcvf03kjqrj6dxnnsy1dzv5sk0-nspr-4.36/lib:/nix/store/la3w078ipfi6l985lrfrgckvx2c4lkff-dbus-1.14.10-lib/lib:/nix/store/yxv2diq8wpyvmi7dgjp0lqjbcl1y6236-at-spi2-core-2.54.0/lib:/nix/store/4y9y64430fa00h4k30j29kjvb66231d7-libdrm-2.4.123/lib:/nix/store/l9byw3fs59qb3m8wkvchjgii70v26d2s-gtk+3-3.24.43/lib:/nix/store/d11ikp74xfv8jn2h791hpirfz2qqm2a3-pango-1.54.0/lib:/nix/store/fpxwbc130qcbyzsv5a4qr59jhnlv9q3a-cairo-1.18.2/lib:/nix/store/zcq4irdcgn3ljqdnlpm2zjp7f1kw9jvm-libX11-1.8.10/lib:/nix/store/b9yx3c2ny9kh4vxmqxnpm355wmzfvc5v-libXcomposite-0.4.6/lib:/nix/store/m6r497vlxbki4fpivgzr3hpzhbc5hips-libXdamage-1.1.6/lib:/nix/store/hi1mbz7s24l63w1m9sy9ynl8yjvb2f46-libXext-1.3.6/lib:/nix/store/ji427fnv38rcyh2m6z3hl3cc9ygmlhb0-libXfixes-6.0.1/lib:/nix/store/k4wbhldwg6lfsiaxmp6fjzma8qdh3vm5-libXrandr-1.5.4/lib:/nix/store/83f8jlgdm6yqwxlmx7dlyjzkazfz73js-mesa-24.2.8/lib:/nix/store/dl2q06nxjxz7b2dmpkrvjzdyk0plpxhs-expat-2.6.4/lib:/nix/store/c25p9xs9n6grwx4i4l4kmz09scgcav4b-libxcb-1.17.0/lib:/nix/store/9bjscsqnzkwyph3zdhajznn92h357r14-libxkbcommon-1.7.0/lib:/nix/store/p4mjdx6l2q4ff3ssjwh989rlw4xwljb7-alsa-lib-1.2.12/lib:/nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+searching for dependencies of /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/opt/Discord/libvulkan.so.1
+    libgcc_s.so.1 -> found: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+setting RPATH to: /nix/store/bmjqxvy53752b3xfvbab6s87xq06hxbs-gcc-13.3.0-libgcc/lib
+auto-patchelf: 0 dependencies could not be satisfied
+rewriting symlink /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/share/icons/hicolor/256x256/apps/discord.png to be relative to /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81
+rewriting symlink /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/share/pixmaps/discord.png to be relative to /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81
+rewriting symlink /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/bin/Discord to be relative to /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81
+rewriting symlink /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81/bin/discord to be relative to /nix/store/8vcp7hlxy9mxqr5b807kir0bv43l1f5b-discord-0.0.81
+building '/nix/store/iigpz1v6y2p8g4bshcxazddv7cakxnsm-user-environment.drv'...
+created 156 symlinks in user environment
+gtk-update-icon-cache: Cache file created successfully.
+building '/nix/store/i2mnjw38m8344ja6yb29jbkj5bybwdyx-etc.drv'...
+building '/nix/store/9jfr35yafzsz2anq15005cvpaf936ifz-nixos-system-laptop-24.11.713790.2b4230bf03de.drv'...
 activating the configuration...
 setting up /etc...
 reloading user units for felix...
 restarting sysinit-reactivation.target
+the following new units were started: sysinit-reactivation.target, systemd-tmpfiles-resetup.service
