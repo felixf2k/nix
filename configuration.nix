@@ -21,6 +21,9 @@ in
     firewall = {
       allowedTCPPorts = [ 5173 4173 ];
       allowedUDPPorts = [ 500 4500 ];
+      extraCommands = ''
+        iptables -t mangle -A FORWARD -o tun0 -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1360
+      '';
     };
     extraHosts = ''
       127.0.0.1 caddy.localhost
