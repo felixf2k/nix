@@ -142,6 +142,7 @@ in
       vscode
       discord
       solaar
+      gnomeExtensions.solaar-extension
     ];
   };
 
