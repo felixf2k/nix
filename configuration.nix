@@ -141,7 +141,7 @@ in
       obsidian
       vscode
       discord
-      # pkgs.kitty # required for the default Hyprland config
+      solaar
     ];
   };
 
