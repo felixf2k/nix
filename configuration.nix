@@ -32,6 +32,24 @@ in
       {
         hostName = "laptop";
         networkmanager.enable = true;
+        networkmanager.dispatcherScripts = [
+          {
+            # This script runs whenever an interface state changes
+            source = pkgs.writeText "mtu-setter" ''
+              # The interface name is the first argument ($1), state is the second ($2)
+              INTERFACE=$1
+              STATE=$2
+
+              # We only care when the main interfaces connect
+              if [[ "$INTERFACE" == "eth0" || "$INTERFACE" == "wlp0s20f3" ]]; then
+                if [[ "$STATE" == "up" ]]; then
+                  # Set the MTU using the 'ip' command
+                  ${pkgs.iproute2}/bin/ip link set dev "$INTERFACE" mtu ${toString vpnMtu}
+                fi
+              fi
+            '';
+          }
+        ];
         firewall = {
           allowedTCPPorts = [ 5173 4173 ];
           allowedUDPPorts = [ 500 4500 ];
@@ -44,10 +62,6 @@ in
         extraHosts = ''
           127.0.0.1 caddy.localhost
         '';
-        interfaces = {
-          eth0.mtu = vpnMtu;
-          wlp0s20f3.mtu = vpnMtu;
-        };      
       };
 
   # Enable and configure Strongswan
