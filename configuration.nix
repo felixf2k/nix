@@ -44,8 +44,10 @@ in
         extraHosts = ''
           127.0.0.1 caddy.localhost
         '';
-        # Now you can use the variable here!
-        interfaces.eth0.mtu = vpnMtu;
+        interfaces = {
+          eth0.mtu = vpnMtu;
+          wlp0s20f3.mtu = vpnMtu;
+        };      
       };
 
   # Enable and configure Strongswan
