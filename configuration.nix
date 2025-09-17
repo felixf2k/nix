@@ -28,8 +28,8 @@ in
       allowedTCPPorts = [ 5173 4173 ];
       allowedUDPPorts = [ 500 4500 ];
       extraCommands = ''
-        iptables -t mangle -A FORWARD -o vti0 -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1360
-        ip6tables -t mangle -A FORWARD -o vti0 -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1360
+        iptables -t mangle -A FORWARD -o eth0 -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1360
+        ip6tables -t mangle -A FORWARD -o eth0 -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1360
       '';
     };
     extraHosts = ''
