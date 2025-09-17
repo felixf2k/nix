@@ -52,6 +52,7 @@ in
         leftid="@laptop";
         leftsourceip = "%config"; # entspricht leftmodecfgclient=yes
         leftauth = "psk";
+        leftmtu = "1389"; 
 
         right = "212.87.147.6";
         rightid = "@fortigate-0001";
