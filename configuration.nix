@@ -16,13 +16,20 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Enable IP forwarding for the system to act as a router for the VPN tunnel
+  boot.kernel.sysctl = {
+    "net.ipv4.ip_forward" = true;
+    "net.ipv6.conf.all.forwarding" = true;
+  };
+
   networking = {
     hostName = "laptop";
     firewall = {
       allowedTCPPorts = [ 5173 4173 ];
       allowedUDPPorts = [ 500 4500 ];
       extraCommands = ''
-        iptables -t mangle -A FORWARD -o tun0 -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1360
+        iptables -t mangle -A FORWARD -o vti0 -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1360
+        ip6tables -t mangle -A FORWARD -o vti0 -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1360
       '';
     };
     extraHosts = ''
