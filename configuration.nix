@@ -22,21 +22,31 @@ in
     "net.ipv6.conf.all.forwarding" = true;
   };
 
-  networking = {
-    hostName = "laptop";
-    firewall = {
-      allowedTCPPorts = [ 5173 4173 ];
-      allowedUDPPorts = [ 500 4500 ];
-      extraCommands = ''
-        iptables -t mangle -A FORWARD -o eth0 -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1360
-        ip6tables -t mangle -A FORWARD -o eth0 -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1360
-      '';
-    };
-    extraHosts = ''
-      127.0.0.1 caddy.localhost
-    '';
-    interfaces.eth0.mtu = 1389;
-  };
+  networking =
+      let
+        # Define MTU and MSS here to be used throughout the networking config.
+        vpnMtu = 1389;
+        # MSS = MTU - 40 bytes (20 for IP header, 20 for TCP header)
+        vpnMss = vpnMtu - 40;
+      in
+      {
+        hostName = "laptop";
+        networkmanager.enable = true;
+        firewall = {
+          allowedTCPPorts = [ 5173 4173 ];
+          allowedUDPPorts = [ 500 4500 ];
+          extraCommands = ''
+            # Clamp MSS on packets originating from this machine and going out.
+            iptables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss ${toString vpnMss}
+            ip6tables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss ${toString vpnMss}
+          '';
+        };
+        extraHosts = ''
+          127.0.0.1 caddy.localhost
+        '';
+        # Now you can use the variable here!
+        interfaces.eth0.mtu = vpnMtu;
+      };
 
   # Enable and configure Strongswan
   services.strongswan = {
@@ -71,9 +81,6 @@ in
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
