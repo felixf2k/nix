@@ -35,6 +35,7 @@ in
     extraHosts = ''
       127.0.0.1 caddy.localhost
     '';
+    interfaces.eth0.mtu = 1389;
   };
 
   # Enable and configure Strongswan
@@ -52,7 +53,7 @@ in
         leftid="@laptop";
         leftsourceip = "%config"; # entspricht leftmodecfgclient=yes
         leftauth = "psk";
-        leftmtu = "1389"; 
+        # leftmtu = 1389; 
 
         right = "212.87.147.6";
         rightid = "@fortigate-0001";
