@@ -75,13 +75,13 @@ in
         type = "tunnel";
         mobike = "yes";
         
-        # 1. Action to take when the connection closes for any reason.
-        closeaction = "restart";
+        # # 1. Action to take when the connection closes for any reason.
+        # closeaction = "restart";
 
-        # 2. Dead Peer Detection (keepalive) settings.
-        dpdaction = "restart";    # If peer is declared dead, restart the connection.
-        dpddelay = "30s";         # Send a keepalive packet after 30s of inactivity.
-        dpdtimeout = "120s";      # If no reply after 120s, assume peer is down.
+        # # 2. Dead Peer Detection (keepalive) settings.
+        # dpdaction = "restart";    # If peer is declared dead, restart the connection.
+        # dpddelay = "30s";         # Send a keepalive packet after 30s of inactivity.
+        # dpdtimeout = "120s";      # If no reply after 120s, assume peer is down.
 
         left = "%any";
         leftid="@laptop";
