@@ -31,6 +31,13 @@ in
     firewall = {
       allowedTCPPorts = [ 5173 4173 ];
       allowedUDPPorts = [ 500 4500 ];
+      extraCommands = ''
+        # For IPv4: Allow ICMP "Fragmentation Needed"
+        iptables -A INPUT -p icmp --icmp-type fragmentation-needed -j ACCEPT
+
+        # For IPv6: Allow ICMPv6 "Packet Too Big"
+        ip6tables -A INPUT -p icmpv6 --icmpv6-type packet-too-big -j ACCEPT
+      '';
     };
     extraHosts = ''
       127.0.0.1 caddy.localhost
