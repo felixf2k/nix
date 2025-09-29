@@ -31,33 +31,36 @@ in
       in
       {
         hostName = "laptop";
-        networkmanager.enable = true;
-        networkmanager.dispatcherScripts = [
-          {
-            # This script runs whenever an interface state changes
-            source = pkgs.writeText "mtu-setter" ''
-              # The interface name is the first argument ($1), state is the second ($2)
-              INTERFACE=$1
-              STATE=$2
+        networkmanager = {
+          enable = true;
+          enableStrongSwan = true;
+          # dispatcherScripts = [
+          #   {
+          #     # This script runs whenever an interface state changes
+          #     source = pkgs.writeText "mtu-setter" ''
+          #       # The interface name is the first argument ($1), state is the second ($2)
+          #       INTERFACE=$1
+          #       STATE=$2
 
-              # We only care when the main interfaces connect
-              if [[ "$INTERFACE" == "eth0" || "$INTERFACE" == "wlp0s20f3" ]]; then
-                if [[ "$STATE" == "up" ]]; then
-                  # Set the MTU using the 'ip' command
-                  ${pkgs.iproute2}/bin/ip link set dev "$INTERFACE" mtu ${toString vpnMtu}
-                fi
-              fi
-            '';
-          }
-        ];
+          #       # We only care when the main interfaces connect
+          #       if [[ "$INTERFACE" == "eth0" || "$INTERFACE" == "wlp0s20f3" ]]; then
+          #         if [[ "$STATE" == "up" ]]; then
+          #           # Set the MTU using the 'ip' command
+          #           ${pkgs.iproute2}/bin/ip link set dev "$INTERFACE" mtu ${toString vpnMtu}
+          #         fi
+          #       fi
+          #     '';
+          #   }
+          # ];
+        };
         firewall = {
           allowedTCPPorts = [ 5173 4173 ];
           allowedUDPPorts = [ 500 4500 ];
-          extraCommands = ''
-            # Clamp MSS on packets originating from this machine and going out.
-            iptables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss ${toString vpnMss}
-            ip6tables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss ${toString vpnMss}
-          '';
+          # extraCommands = ''
+          #   # Clamp MSS on packets originating from this machine and going out.
+          #   iptables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss ${toString vpnMss}
+          #   ip6tables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss ${toString vpnMss}
+          # '';
         };
         extraHosts = ''
           127.0.0.1 caddy.localhost
@@ -87,7 +90,7 @@ in
         leftid="@laptop";
         leftsourceip = "%config"; # entspricht leftmodecfgclient=yes
         leftauth = "psk";
-        # leftmtu = 1389; 
+        # leftmtu = "1389"; 
 
         right = "212.87.147.6";
         rightid = "@fortigate-0001";
