@@ -32,11 +32,10 @@ in
       allowedTCPPorts = [ 5173 4173 ];
       allowedUDPPorts = [ 500 4500 ];
       extraCommands = ''
-        # For IPv4: Allow ICMP "Fragmentation Needed"
-        iptables -A INPUT -p icmp --icmp-type fragmentation-needed -j ACCEPT
-
-        # For IPv6: Allow ICMPv6 "Packet Too Big"
-        ip6tables -A INPUT -p icmpv6 --icmpv6-type packet-too-big -j ACCEPT
+        # This forces TCP connections going through the firewall (like over the VPN)
+        # to use a smaller packet size, avoiding MTU issues.
+        # 1349 is calculated from your MTU of 1389 (1389 - 40 for headers).
+        iptables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1349
       '';
     };
     extraHosts = ''
