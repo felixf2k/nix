@@ -26,16 +26,13 @@ in
     hostName = "laptop";
     networkmanager = {
       enable = true;
-      enableStrongSwan = true;
+      # enableStrongSwan = true;
     };
     firewall = {
       allowedTCPPorts = [ 5173 4173 ];
       allowedUDPPorts = [ 500 4500 ];
       extraCommands = ''
-        # This forces TCP connections going through the firewall (like over the VPN)
-        # to use a smaller packet size, avoiding MTU issues.
-        # 1349 is calculated from your MTU of 1389 (1389 - 40 for headers).
-        iptables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1349
+        iptables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
       '';
     };
     extraHosts = ''
@@ -53,20 +50,11 @@ in
         auto = "start";
         type = "tunnel";
         mobike = "yes";
-        
-        # # 1. Action to take when the connection closes for any reason.
-        # closeaction = "restart";
-
-        # # 2. Dead Peer Detection (keepalive) settings.
-        # dpdaction = "restart";    # If peer is declared dead, restart the connection.
-        # dpddelay = "30s";         # Send a keepalive packet after 30s of inactivity.
-        # dpdtimeout = "120s";      # If no reply after 120s, assume peer is down.
 
         left = "%any";
         leftid="@laptop";
-        leftsourceip = "%config"; # entspricht leftmodecfgclient=yes
+        leftsourceip = "%config";
         leftauth = "psk";
-        leftmtu = "1389"; 
 
         right = "212.87.147.6";
         rightid = "@fortigate-0001";
