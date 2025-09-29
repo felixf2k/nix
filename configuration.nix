@@ -22,50 +22,20 @@ in
     "net.ipv6.conf.all.forwarding" = true;
   };
 
-  networking =
-      let
-        # Define MTU and MSS here to be used throughout the networking config.
-        vpnMtu = 1389;
-        # MSS = MTU - 40 bytes (20 for IP header, 20 for TCP header)
-        vpnMss = vpnMtu - 40;
-      in
-      {
-        hostName = "laptop";
-        networkmanager = {
-          enable = true;
-          enableStrongSwan = true;
-          # dispatcherScripts = [
-          #   {
-          #     # This script runs whenever an interface state changes
-          #     source = pkgs.writeText "mtu-setter" ''
-          #       # The interface name is the first argument ($1), state is the second ($2)
-          #       INTERFACE=$1
-          #       STATE=$2
-
-          #       # We only care when the main interfaces connect
-          #       if [[ "$INTERFACE" == "eth0" || "$INTERFACE" == "wlp0s20f3" ]]; then
-          #         if [[ "$STATE" == "up" ]]; then
-          #           # Set the MTU using the 'ip' command
-          #           ${pkgs.iproute2}/bin/ip link set dev "$INTERFACE" mtu ${toString vpnMtu}
-          #         fi
-          #       fi
-          #     '';
-          #   }
-          # ];
-        };
-        firewall = {
-          allowedTCPPorts = [ 5173 4173 ];
-          allowedUDPPorts = [ 500 4500 ];
-          # extraCommands = ''
-          #   # Clamp MSS on packets originating from this machine and going out.
-          #   iptables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss ${toString vpnMss}
-          #   ip6tables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss ${toString vpnMss}
-          # '';
-        };
-        extraHosts = ''
-          127.0.0.1 caddy.localhost
-        '';
-      };
+  networking = {
+    hostName = "laptop";
+    networkmanager = {
+      enable = true;
+      enableStrongSwan = true;
+    };
+    firewall = {
+      allowedTCPPorts = [ 5173 4173 ];
+      allowedUDPPorts = [ 500 4500 ];
+    };
+    extraHosts = ''
+      127.0.0.1 caddy.localhost
+    '';
+  };
 
   # Enable and configure Strongswan
   services.strongswan = {
@@ -90,7 +60,7 @@ in
         leftid="@laptop";
         leftsourceip = "%config"; # entspricht leftmodecfgclient=yes
         leftauth = "psk";
-        # leftmtu = "1389"; 
+        leftmtu = "1389"; 
 
         right = "212.87.147.6";
         rightid = "@fortigate-0001";
@@ -103,11 +73,6 @@ in
     };
   };
   environment.etc."ipsec.secrets".source = lib.mkForce ./ipsec.secrets;
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -158,17 +123,7 @@ in
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-  # programs.hyprland.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.felix = {
@@ -193,12 +148,12 @@ in
     ];
   };
 
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-  };
+  # programs.steam = {
+  #   enable = true;
+  #   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+  #   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  #   localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+  # };
 
   # enable docker
   virtualisation.docker.enable = true;
