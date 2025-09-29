@@ -22,23 +22,47 @@ in
     "net.ipv6.conf.all.forwarding" = true;
   };
 
-  networking = {
-    hostName = "laptop";
-    networkmanager = {
-      enable = true;
-      # enableStrongSwan = true;
-    };
-    firewall = {
-      allowedTCPPorts = [ 5173 4173 ];
-      allowedUDPPorts = [ 500 4500 ];
-      extraCommands = ''
-        iptables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
-      '';
-    };
-    extraHosts = ''
-      127.0.0.1 caddy.localhost
-    '';
-  };
+  networking =
+      let
+        # Define MTU and MSS here to be used throughout the networking config.
+        vpnMtu = 1389;
+        # MSS = MTU - 40 bytes (20 for IP header, 20 for TCP header)
+        vpnMss = vpnMtu - 40;
+      in
+      {
+        hostName = "laptop";
+        networkmanager.enable = true;
+        networkmanager.dispatcherScripts = [
+          {
+            # This script runs whenever an interface state changes
+            source = pkgs.writeText "mtu-setter" ''
+              # The interface name is the first argument ($1), state is the second ($2)
+              INTERFACE=$1
+              STATE=$2
+
+              # We only care when the main interfaces connect
+              if [[ "$INTERFACE" == "eth0" || "$INTERFACE" == "wlp0s20f3" ]]; then
+                if [[ "$STATE" == "up" ]]; then
+                  # Set the MTU using the 'ip' command
+                  ${pkgs.iproute2}/bin/ip link set dev "$INTERFACE" mtu ${toString vpnMtu}
+                fi
+              fi
+            '';
+          }
+        ];
+        firewall = {
+          allowedTCPPorts = [ 5173 4173 ];
+          allowedUDPPorts = [ 500 4500 ];
+          extraCommands = ''
+            # Clamp MSS on packets originating from this machine and going out.
+            iptables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss ${toString vpnMss}
+            ip6tables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss ${toString vpnMss}
+          '';
+        };
+        extraHosts = ''
+          127.0.0.1 caddy.localhost
+        '';
+      };
 
   # Enable and configure Strongswan
   services.strongswan = {
