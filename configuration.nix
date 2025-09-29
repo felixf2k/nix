@@ -32,31 +32,38 @@ in
       {
         hostName = "laptop";
         networkmanager.enable = true;
-        networkmanager.dispatcherScripts = [
-          {
-            # This script runs whenever an interface state changes
-            source = pkgs.writeText "mtu-setter" ''
-              # The interface name is the first argument ($1), state is the second ($2)
-              INTERFACE=$1
-              STATE=$2
+        # networkmanager.dispatcherScripts = [
+        #   {
+        #     # This script runs whenever an interface state changes
+        #     source = pkgs.writeText "mtu-setter" ''
+        #       # The interface name is the first argument ($1), state is the second ($2)
+        #       INTERFACE=$1
+        #       STATE=$2
 
-              # We only care when the main interfaces connect
-              if [[ "$INTERFACE" == "eth0" || "$INTERFACE" == "wlp0s20f3" ]]; then
-                if [[ "$STATE" == "up" ]]; then
-                  # Set the MTU using the 'ip' command
-                  ${pkgs.iproute2}/bin/ip link set dev "$INTERFACE" mtu ${toString vpnMtu}
-                fi
-              fi
-            '';
-          }
-        ];
+        #       # We only care when the main interfaces connect
+        #       if [[ "$INTERFACE" == "eth0" || "$INTERFACE" == "wlp0s20f3" ]]; then
+        #         if [[ "$STATE" == "up" ]]; then
+        #           # Set the MTU using the 'ip' command
+        #           ${pkgs.iproute2}/bin/ip link set dev "$INTERFACE" mtu ${toString vpnMtu}
+        #         fi
+        #       fi
+        #     '';
+        #   }
+        # ];
         firewall = {
           allowedTCPPorts = [ 5173 4173 ];
           allowedUDPPorts = [ 500 4500 ];
           extraCommands = ''
-            # Clamp MSS on packets originating from this machine and going out.
-            iptables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss ${toString vpnMss}
-            ip6tables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss ${toString vpnMss}
+            # Set a variable for a clean ruleset. MTU of 1389 - 40 = 1349.
+            VPN_MSS=1349
+
+            # Rule for traffic originating FROM your laptop (fixes uploads)
+            iptables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $VPN_MSS
+            ip6tables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $VPN_MSS
+
+            # Rule for traffic passing THROUGH your firewall (fixes downloads)
+            iptables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $VPN_MSS
+            ip6tables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $VPN_MSS
           '';
         };
         extraHosts = ''
