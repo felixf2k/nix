@@ -6,6 +6,28 @@
 
 let
   secrets = import ./secrets.nix; # Import your secrets file
+  mssClampScript = pkgs.writeShellScript "mss-clamp.sh" ''
+      #!${pkgs.runtimeShell}
+      
+      # This script is called with different verbs. We only care about 'up' and 'down'.
+      case "$PLUTO_VERB" in
+        up-client)
+          # When the VPN connects, INSERT the MSS clamping rules into the mangle table.
+          # We use -I (insert) to make sure our rules are at the top.
+          ${pkgs.iptables}/bin/iptables -t mangle -I FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+          ${pkgs.iptables}/bin/ip6tables -t mangle -I FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+          ${pkgs.iptables}/bin/iptables -t mangle -I OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+          ${pkgs.iptables}/bin/ip6tables -t mangle -I OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+          ;;
+        down-client)
+          # When the VPN disconnects, DELETE the rules to keep the system clean.
+          ${pkgs.iptables}/bin/iptables -t mangle -D FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+          ${pkgs.iptables}/bin/ip6tables -t mangle -D FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+          ${pkgs.iptables}/bin/iptables -t mangle -D OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+          ${pkgs.iptables}/bin/ip6tables -t mangle -D OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+          ;;
+      esac
+    '';
 in
 {
   imports =
@@ -35,25 +57,29 @@ in
         firewall = {
           allowedTCPPorts = [ 5173 4173 ];
           allowedUDPPorts = [ 500 4500 ];
-          extraCommands = ''
-            # Dynamically clamp TCP MSS to Path MTU. This is the key fix.
-            # It automatically calculates the correct MSS for any connection,
-            # including the VPN tunnel, without hardcoding values.
+          # extraCommands = ''
+          #   # Dynamically clamp TCP MSS to Path MTU. This is the key fix.
+          #   # It automatically calculates the correct MSS for any connection,
+          #   # including the VPN tunnel, without hardcoding values.
 
-            # Rule for traffic passing THROUGH your firewall (fixes downloads for other devices)
-            iptables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
-            ip6tables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+          #   # Rule for traffic passing THROUGH your firewall (fixes downloads for other devices)
+          #   iptables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+          #   ip6tables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
 
-            # Rule for traffic originating FROM your laptop (fixes uploads/downloads from the laptop itself)
-            iptables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
-            ip6tables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
-          '';
+          #   # Rule for traffic originating FROM your laptop (fixes uploads/downloads from the laptop itself)
+          #   iptables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+          #   ip6tables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+          # '';
         };
         extraHosts = ''
           127.0.0.1 caddy.localhost
         '';
       };
 
+  environment.etc."strongswan/mss-clamp.sh" = {
+    source = mssClampScript;
+    mode = "0755"; # Make it executable
+  };
   # Enable and configure Strongswan
   services.strongswan = {
     enable = true;
@@ -64,6 +90,8 @@ in
         auto = "start";
         type = "tunnel";
         mobike = "yes";
+
+        leftupdown = "/etc/strongswan/mss-clamp.sh";
 
         left = "%any";
         leftid="@laptop";
