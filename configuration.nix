@@ -7,27 +7,37 @@
 let
   secrets = import ./secrets.nix; # Import your secrets file
   mssClampScript = pkgs.writeShellScript "mss-clamp.sh" ''
-      #!${pkgs.runtimeShell}
-      
-      # This script is called with different verbs. We only care about 'up' and 'down'.
-      case "$PLUTO_VERB" in
-        up-client)
-          # When the VPN connects, INSERT the MSS clamping rules into the mangle table.
-          # We use -I (insert) to make sure our rules are at the top.
-          ${pkgs.iptables}/bin/iptables -t mangle -I FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
-          ${pkgs.iptables}/bin/ip6tables -t mangle -I FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
-          ${pkgs.iptables}/bin/iptables -t mangle -I OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
-          ${pkgs.iptables}/bin/ip6tables -t mangle -I OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
-          ;;
-        down-client)
-          # When the VPN disconnects, DELETE the rules to keep the system clean.
-          ${pkgs.iptables}/bin/iptables -t mangle -D FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
-          ${pkgs.iptables}/bin/ip6tables -t mangle -D FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
-          ${pkgs.iptables}/bin/iptables -t mangle -D OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
-          ${pkgs.iptables}/bin/ip6tables -t mangle -D OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
-          ;;
-      esac
-    '';
+    #!${pkgs.runtimeShell}
+    IPTABLES="${pkgs.iptables}/bin/iptables"
+    IP6TABLES="${pkgs.iptables}/bin/ip6tables"
+
+    case "$PLUTO_VERB" in
+      up-client)
+        # For each rule, first check (-C) if it exists.
+        # If the check fails (the '||' part), then insert (-I) the rule.
+        # This prevents duplicate rules if the script is run more than once.
+        $IPTABLES -t mangle -C FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null || \
+          $IPTABLES -t mangle -I FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+
+        $IPTABLES -t mangle -C OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null || \
+          $IPTABLES -t mangle -I OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+
+        $IP6TABLES -t mangle -C FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null || \
+          $IP6TABLES -t mangle -I FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+
+        $IP6TABLES -t mangle -C OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null || \
+          $IP6TABLES -t mangle -I OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+        ;;
+      down-client)
+        # Deleting is already safe to run multiple times.
+        # We hide errors with '2>/dev/null' in case the rule is already gone.
+        $IPTABLES -t mangle -D FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null
+        $IPTABLES -t mangle -D OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null
+        $IP6TABLES -t mangle -D FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null
+        $IP6TABLES -t mangle -D OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null
+        ;;
+    esac
+  '';
 in
 {
   imports =
