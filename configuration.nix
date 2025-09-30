@@ -11,30 +11,31 @@ let
     IPTABLES="${pkgs.iptables}/bin/iptables"
     IP6TABLES="${pkgs.iptables}/bin/ip6tables"
 
+    # MTU discovered to be 1390 (ping payload 1362 + 28 headers).
+    # MSS = MTU - 40 headers = 1350. We manually set this to bypass the MTU black hole.
+    MSS_VALUE="1350"
+
     case "$PLUTO_VERB" in
       up-client)
-        # For each rule, first check (-C) if it exists.
-        # If the check fails (the '||' part), then insert (-I) the rule.
-        # This prevents duplicate rules if the script is run more than once.
-        $IPTABLES -t mangle -C FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null || \
-          $IPTABLES -t mangle -I FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+        # Check if the rule exists (-C) before inserting (-I) to prevent duplicates.
+        $IPTABLES -t mangle -C FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $MSS_VALUE 2>/dev/null || \
+          $IPTABLES -t mangle -I FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $MSS_VALUE
 
-        $IPTABLES -t mangle -C OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null || \
-          $IPTABLES -t mangle -I OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+        $IPTABLES -t mangle -C OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $MSS_VALUE 2>/dev/null || \
+          $IPTABLES -t mangle -I OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $MSS_VALUE
 
-        $IP6TABLES -t mangle -C FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null || \
-          $IP6TABLES -t mangle -I FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+        $IP6TABLES -t mangle -C FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $MSS_VALUE 2>/dev/null || \
+          $IP6TABLES -t mangle -I FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $MSS_VALUE
 
-        $IP6TABLES -t mangle -C OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null || \
-          $IP6TABLES -t mangle -I OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+        $IP6TABLES -t mangle -C OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $MSS_VALUE 2>/dev/null || \
+          $IP6TABLES -t mangle -I OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $MSS_VALUE
         ;;
       down-client)
-        # Deleting is already safe to run multiple times.
-        # We hide errors with '2>/dev/null' in case the rule is already gone.
-        $IPTABLES -t mangle -D FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null
-        $IPTABLES -t mangle -D OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null
-        $IP6TABLES -t mangle -D FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null
-        $IP6TABLES -t mangle -D OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 2>/dev/null
+        # Safely delete the rules on disconnect.
+        $IPTABLES -t mangle -D FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $MSS_VALUE 2>/dev/null
+        $IPTABLES -t mangle -D OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $MSS_VALUE 2>/dev/null
+        $IP6TABLES -t mangle -D FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $MSS_VALUE 2>/dev/null
+        $IP6TABLES -t mangle -D OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss $MSS_VALUE 2>/dev/null
         ;;
     esac
   '';
