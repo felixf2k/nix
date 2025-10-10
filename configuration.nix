@@ -192,6 +192,7 @@ in
       discord
       solaar
       gnomeExtensions.solaar-extension
+      libreoffice
     ];
   };
 
