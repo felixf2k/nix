@@ -111,7 +111,7 @@ in
 
         right = "212.87.147.6";
         rightid = "@fortigate-0001";
-        rightsubnet = "198.18.233.0/24,10.0.1.0/24";
+        rightsubnet = "198.18.233.0/24,10.0.1.0/24,172.16.16.0/20,198.18.234.0/24";
         rightauth = "psk";
 
         fragmentation = "yes";
