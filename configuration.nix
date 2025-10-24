@@ -194,6 +194,7 @@ in
       gnomeExtensions.solaar-extension
       libreoffice
       pnpm
+      nodejs_24
     ];
   };
 
