@@ -193,6 +193,7 @@ in
       solaar
       gnomeExtensions.solaar-extension
       libreoffice
+      pnpm
     ];
   };
 
