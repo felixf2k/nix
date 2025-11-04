@@ -195,6 +195,7 @@ in
       libreoffice
       pnpm
       nodejs_24
+      jetbrains.webstorm
     ];
   };
 
