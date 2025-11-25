@@ -3,179 +3,31 @@ building the system configuration...
 evaluation warning: The option `services.xserver.xkbVariant' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
 evaluation warning: The option `services.xserver.layout' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
 evaluation warning: The option `hardware.pulseaudio' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.pulseaudio'.
-these 5 derivations will be built:
-  /nix/store/pkwkgg7rb03m3ankn75l3q81f5hnp9fg-WebStorm-2025.1.2.tar.gz.drv
-  /nix/store/inkk0w5f34nk99ranb1p7xdf742frwxm-webstorm-2025.1.2.drv
-  /nix/store/88xp9h242fy12498cm5hg6gs872mjd3d-user-environment.drv
-  /nix/store/4w26dn08wpikcz08rfxya0wrv6sn0qaq-etc.drv
-  /nix/store/hmw3p9pr1yjswm73ilnakrcbsbi7myzr-nixos-system-laptop-25.05.809873.9a094440e02a.drv
-this path will be fetched (669.36 MiB download, 1070.45 MiB unpacked):
-  /nix/store/xfd5k26s140w3wzcvfzkqcglcfwisnfx-jetbrains-jdk-jcef-21.0.6-b895.109
-copying path '/nix/store/xfd5k26s140w3wzcvfzkqcglcfwisnfx-jetbrains-jdk-jcef-21.0.6-b895.109' from 'https://cache.nixos.org'...
-building '/nix/store/pkwkgg7rb03m3ankn75l3q81f5hnp9fg-WebStorm-2025.1.2.tar.gz.drv'...
-
-trying https://download.jetbrains.com/webstorm/WebStorm-2025.1.2.tar.gz
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100   138  100   138    0     0    499      0 --:--:-- --:--:-- --:--:--   501
-100 1053M  100 1053M    0     0  4419k      0  0:04:03  0:04:03 --:--:-- 5407k
-building '/nix/store/inkk0w5f34nk99ranb1p7xdf742frwxm-webstorm-2025.1.2.drv'...
-Running phase: unpackPhase
-unpacking source archive /nix/store/4y31pq6ak1vz1br2v4vaysfanmlbgwg3-WebStorm-2025.1.2.tar.gz
-source root is WebStorm-251.26094.131
-Running phase: patchPhase
-patching file plugins/remote-dev-server/bin/launcher.sh
-Hunk #1 succeeded at 321 (offset -1 lines).
-Hunk #2 succeeded at 370 (offset -1 lines).
-Running phase: updateAutotoolsGnuConfigScriptsPhase
-Running phase: configurePhase
-no configure script, doing nothing
-Running phase: buildPhase
-no Makefile or custom buildPhase, doing nothing
-Running phase: installPhase
-Running phase: fixupPhase
-shrinking RPATHs of ELF executables and libraries in /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/lib/pty4j/linux/x86-64/libpty.so
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/lib/native/linux-x86_64/libsqliteij.so
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/lib/jna/amd64/libjnidispatch.so
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/lib/async-profiler/amd64/libasyncProfiler.so
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/lib/async-profiler/aarch64/libasyncProfiler.so
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/cwm-plugin/quiche-native/linux-x86-64/libquiche.so
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/platform-ijent-impl/ijent-x86_64-unknown-linux-musl-release
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/platform-ijent-impl/ijent-aarch64-unknown-linux-musl-release
-patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/webp/lib/libwebp/linux/libwebp_jni.so
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-arm64
-patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-amd64
-patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/.webstorm-wrapped
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/remote-dev-server
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/restarter
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/fsnotifier
-shrinking /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/libdbm.so
-checking for references to /build/ in /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2...
-patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
-patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
-patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
-patching script interpreter paths in /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2
-/nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/remote-dev-server/bin/launcher.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/cfqbabpc7xwg8akbcchqbq3cai6qq2vs-bash-5.2p37/bin/sh"
-/nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/remote-dev-server/bin/launcher.sh.orig: interpreter directive changed from "#!/bin/sh" to "/nix/store/cfqbabpc7xwg8akbcchqbq3cai6qq2vs-bash-5.2p37/bin/sh"
-/nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/format.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/cfqbabpc7xwg8akbcchqbq3cai6qq2vs-bash-5.2p37/bin/sh"
-/nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/remote-dev-server.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/cfqbabpc7xwg8akbcchqbq3cai6qq2vs-bash-5.2p37/bin/sh"
-/nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/inspect.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/cfqbabpc7xwg8akbcchqbq3cai6qq2vs-bash-5.2p37/bin/sh"
-/nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/jetbrains_client.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/cfqbabpc7xwg8akbcchqbq3cai6qq2vs-bash-5.2p37/bin/sh"
-/nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/ltedit.sh: interpreter directive changed from "#!/bin/sh" to "/nix/store/cfqbabpc7xwg8akbcchqbq3cai6qq2vs-bash-5.2p37/bin/sh"
-/nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/remote-dev-server-wrapped.sh: interpreter directive changed from "#!/usr/bin/env bash" to "/nix/store/cfqbabpc7xwg8akbcchqbq3cai6qq2vs-bash-5.2p37/bin/bash"
-stripping (with command strip and flags -S -p) in  /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/bin
-automatically fixing dependencies for ELF files
-{'add_existing': True,
- 'append_rpaths': [],
- 'extra_args': [],
- 'ignore_missing': [],
- 'keep_libc': False,
- 'libs': [PosixPath('/nix/store/cjs1qy5kc0x1aqdm1s0k1n3q038kjsvg-make-shell-wrapper-hook/lib'),
-          PosixPath('/nix/store/cqljzxw1vkgbvjd8bgm90amhaayf09l4-die-hook/lib'),
-          PosixPath('/nix/store/g7i75czfbw9sy5f8v7rjbama6lr3ya3s-patchelf-0.15.0/lib'),
-          PosixPath('/nix/store/79ysab89h735q0bhhw4hbgi4vkapikhn-unzip-6.0/lib'),
-          PosixPath('/nix/store/899lph645gqwjl135zfrygc2470xl1ab-auto-patchelf-hook/lib'),
-          PosixPath('/nix/store/zj3qyigijgjc1c3vm4lkchb4ndw68c8d-auto-patchelf-0-unstable-2024-08-14/lib'),
-          PosixPath('/nix/store/wlzvi1mvdx5ifpaxpw1hc1hcm3ia4wj2-binutils-wrapper-2.44/lib'),
-          PosixPath('/nix/store/gi6g289i9ydm3z896x67q210y0qq29zg-update-autotools-gnu-config-scripts-hook/lib'),
-          PosixPath('/nix/store/jjhw2phnaip4kg0qjas3x3fsaifi8y0w-no-broken-symlinks.sh/lib'),
-          PosixPath('/nix/store/h9lc1dpi14z7is86ffhl3ld569138595-audit-tmpdir.sh/lib'),
-          PosixPath('/nix/store/m54bmrhj6fqz8nds5zcj97w9s9bckc9v-compress-man-pages.sh/lib'),
-          PosixPath('/nix/store/wgrbkkaldkrlrni33ccvm3b6vbxzb656-make-symlinks-relative.sh/lib'),
-          PosixPath('/nix/store/5yzw0vhkyszf2d179m0qfkgxmp5wjjx4-move-docs.sh/lib'),
-          PosixPath('/nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh/lib'),
-          PosixPath('/nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh/lib'),
-          PosixPath('/nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh/lib'),
-          PosixPath('/nix/store/cmzya9irvxzlkh7lfy6i82gbp0saxqj3-multiple-outputs.sh/lib'),
-          PosixPath('/nix/store/hxv896faph0rqxjq2ycxpcrbnngc95sz-patch-shebangs.sh/lib'),
-          PosixPath('/nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh/lib'),
-          PosixPath('/nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh/lib'),
-          PosixPath('/nix/store/z7k98578dfzi6l3hsvbivzm7hfqlk0zc-set-source-date-epoch-to-latest.sh/lib'),
-          PosixPath('/nix/store/pilsssjjdxvdphlg2h19p0bfx5q0jzkn-strip.sh/lib'),
-          PosixPath('/nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/lib'),
-          PosixPath('/nix/store/87zpmcmwvn48z4lbrfba74b312h22s6c-binutils-wrapper-2.44/lib'),
-          PosixPath('/nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/lib'),
-          PosixPath('/nix/store/dj06r96j515npcqi9d8af1d1c60bx2vn-gcc-14.3.0-lib/lib'),
-          PosixPath('/nix/store/jy40zmxaf4pp6kj5iwifmf3zkx3zh884-musl-1.2.5-dev/lib'),
-          PosixPath('/nix/store/jz83gbmdag3rn9fl8bv89k8aafj3k20v-musl-1.2.5-bin/lib'),
-          PosixPath('/nix/store/nza8xg2jx5awijsm87xr2mjdajlq0r0y-musl-1.2.5/lib'),
-          PosixPath('/nix/store/cjs1qy5kc0x1aqdm1s0k1n3q038kjsvg-make-shell-wrapper-hook/lib'),
-          PosixPath('/nix/store/cqljzxw1vkgbvjd8bgm90amhaayf09l4-die-hook/lib'),
-          PosixPath('/nix/store/g7i75czfbw9sy5f8v7rjbama6lr3ya3s-patchelf-0.15.0/lib'),
-          PosixPath('/nix/store/79ysab89h735q0bhhw4hbgi4vkapikhn-unzip-6.0/lib'),
-          PosixPath('/nix/store/899lph645gqwjl135zfrygc2470xl1ab-auto-patchelf-hook/lib'),
-          PosixPath('/nix/store/zj3qyigijgjc1c3vm4lkchb4ndw68c8d-auto-patchelf-0-unstable-2024-08-14/lib'),
-          PosixPath('/nix/store/wlzvi1mvdx5ifpaxpw1hc1hcm3ia4wj2-binutils-wrapper-2.44/lib'),
-          PosixPath('/nix/store/gi6g289i9ydm3z896x67q210y0qq29zg-update-autotools-gnu-config-scripts-hook/lib'),
-          PosixPath('/nix/store/jjhw2phnaip4kg0qjas3x3fsaifi8y0w-no-broken-symlinks.sh/lib'),
-          PosixPath('/nix/store/h9lc1dpi14z7is86ffhl3ld569138595-audit-tmpdir.sh/lib'),
-          PosixPath('/nix/store/m54bmrhj6fqz8nds5zcj97w9s9bckc9v-compress-man-pages.sh/lib'),
-          PosixPath('/nix/store/wgrbkkaldkrlrni33ccvm3b6vbxzb656-make-symlinks-relative.sh/lib'),
-          PosixPath('/nix/store/5yzw0vhkyszf2d179m0qfkgxmp5wjjx4-move-docs.sh/lib'),
-          PosixPath('/nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh/lib'),
-          PosixPath('/nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh/lib'),
-          PosixPath('/nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh/lib'),
-          PosixPath('/nix/store/cmzya9irvxzlkh7lfy6i82gbp0saxqj3-multiple-outputs.sh/lib'),
-          PosixPath('/nix/store/hxv896faph0rqxjq2ycxpcrbnngc95sz-patch-shebangs.sh/lib'),
-          PosixPath('/nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh/lib'),
-          PosixPath('/nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh/lib'),
-          PosixPath('/nix/store/z7k98578dfzi6l3hsvbivzm7hfqlk0zc-set-source-date-epoch-to-latest.sh/lib'),
-          PosixPath('/nix/store/pilsssjjdxvdphlg2h19p0bfx5q0jzkn-strip.sh/lib'),
-          PosixPath('/nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/lib'),
-          PosixPath('/nix/store/87zpmcmwvn48z4lbrfba74b312h22s6c-binutils-wrapper-2.44/lib'),
-          PosixPath('/nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/lib'),
-          PosixPath('/nix/store/dj06r96j515npcqi9d8af1d1c60bx2vn-gcc-14.3.0-lib/lib'),
-          PosixPath('/nix/store/jy40zmxaf4pp6kj5iwifmf3zkx3zh884-musl-1.2.5-dev/lib'),
-          PosixPath('/nix/store/jz83gbmdag3rn9fl8bv89k8aafj3k20v-musl-1.2.5-bin/lib'),
-          PosixPath('/nix/store/nza8xg2jx5awijsm87xr2mjdajlq0r0y-musl-1.2.5/lib')],
- 'paths': [PosixPath('/nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2')],
- 'recursive': True,
- 'runtime_dependencies': []}
-setting interpreter of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/.webstorm-wrapped
-searching for dependencies of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/.webstorm-wrapped
-    libgcc_s.so.1 -> found: /nix/store/4j6p91af1bfgnn31agg1c9ijr0kyg6gi-gcc-14.3.0-libgcc/lib
-setting RPATH to: /nix/store/4j6p91af1bfgnn31agg1c9ijr0kyg6gi-gcc-14.3.0-libgcc/lib
-setting interpreter of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/remote-dev-server
-searching for dependencies of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/remote-dev-server
-    libgcc_s.so.1 -> found: /nix/store/4j6p91af1bfgnn31agg1c9ijr0kyg6gi-gcc-14.3.0-libgcc/lib
-setting RPATH to: /nix/store/4j6p91af1bfgnn31agg1c9ijr0kyg6gi-gcc-14.3.0-libgcc/lib
-searching for dependencies of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/restarter
-setting interpreter of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/fsnotifier
-searching for dependencies of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/fsnotifier
-searching for dependencies of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/bin/libdbm.so
-    libglib-2.0.so.0 -> found: /nix/store/hrf93msqylm2q8mnaxhg67l0iic0dfz8-glib-2.84.3/lib
-setting RPATH to: /nix/store/hrf93msqylm2q8mnaxhg67l0iic0dfz8-glib-2.84.3/lib
-searching for dependencies of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/lib/pty4j/linux/x86-64/libpty.so
-searching for dependencies of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/lib/native/linux-x86_64/libsqliteij.so
-searching for dependencies of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/lib/jna/amd64/libjnidispatch.so
-searching for dependencies of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/lib/async-profiler/amd64/libasyncProfiler.so
-skipping /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/lib/async-profiler/aarch64/libasyncProfiler.so because its architecture (AArch64) differs from target (x64)
-searching for dependencies of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/platform-ijent-impl/ijent-x86_64-unknown-linux-musl-release
-skipping /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/platform-ijent-impl/ijent-aarch64-unknown-linux-musl-release because it is statically linked
-searching for dependencies of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/cwm-plugin/quiche-native/linux-x86-64/libquiche.so
-    libgcc_s.so.1 -> found: /nix/store/4j6p91af1bfgnn31agg1c9ijr0kyg6gi-gcc-14.3.0-libgcc/lib
-setting RPATH to: /nix/store/4j6p91af1bfgnn31agg1c9ijr0kyg6gi-gcc-14.3.0-libgcc/lib
-searching for dependencies of /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/webp/lib/libwebp/linux/libwebp_jni.so
-skipping /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-arm64 because it is statically linked
-skipping /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/webstorm/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-amd64 because it is statically linked
-auto-patchelf: 0 dependencies could not be satisfied
-rewriting symlink /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/share/icons/hicolor/scalable/apps/webstorm.svg to be relative to /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2
-rewriting symlink /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/share/pixmaps/webstorm.svg to be relative to /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2
-rewriting symlink /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/share/pixmaps/webstorm.png to be relative to /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2
-rewriting symlink /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/bin/webstorm-remote-dev-server to be relative to /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2
-rewriting symlink /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2/bin/webstorm to be relative to /nix/store/w35jb69h3ghzmsads7m8mwa68rs8a33w-webstorm-2025.1.2
-building '/nix/store/88xp9h242fy12498cm5hg6gs872mjd3d-user-environment.drv'...
-created 425 symlinks in user environment
+these 6 derivations will be built:
+  /nix/store/668qrckh3c508y0950rb8bv7gxzj60a2-steam-fhsenv-rootfs.drv
+  /nix/store/dh9agb1nm7ln9b8m44hwrmm6jcvsa97y-steam-bwrap.drv
+  /nix/store/ghp6v0yv6lp2bi7a547286c09wdxd0gc-steam.drv
+  /nix/store/agj7vrk34s95pda358iqfs2cy1vp4pzs-user-environment.drv
+  /nix/store/9dkj5mkjm0jqcvd61q5hwargs8p8v9v4-etc.drv
+  /nix/store/ywlzgwvawhqkldsi378ikfif0s210s9r-nixos-system-laptop-25.05.809873.9a094440e02a.drv
+building '/nix/store/668qrckh3c508y0950rb8bv7gxzj60a2-steam-fhsenv-rootfs.drv'...
+structuredAttrs is enabled
+Warning: Schema ?org.gnome.system.locale? has path ?/system/locale/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
+Warning: Schema ?org.gnome.system.proxy? has path ?/system/proxy/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
+Warning: Schema ?org.gnome.system.proxy.http? has path ?/system/proxy/http/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
+Warning: Schema ?org.gnome.system.proxy.https? has path ?/system/proxy/https/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
+Warning: Schema ?org.gnome.system.proxy.ftp? has path ?/system/proxy/ftp/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
+Warning: Schema ?org.gnome.system.proxy.socks? has path ?/system/proxy/socks/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
+building '/nix/store/dh9agb1nm7ln9b8m44hwrmm6jcvsa97y-steam-bwrap.drv'...
+building '/nix/store/ghp6v0yv6lp2bi7a547286c09wdxd0gc-steam.drv'...
+building '/nix/store/agj7vrk34s95pda358iqfs2cy1vp4pzs-user-environment.drv'...
+created 437 symlinks in user environment
 gtk-update-icon-cache: Cache file created successfully.
-building '/nix/store/4w26dn08wpikcz08rfxya0wrv6sn0qaq-etc.drv'...
-building '/nix/store/hmw3p9pr1yjswm73ilnakrcbsbi7myzr-nixos-system-laptop-25.05.809873.9a094440e02a.drv'...
+building '/nix/store/9dkj5mkjm0jqcvd61q5hwargs8p8v9v4-etc.drv'...
+building '/nix/store/ywlzgwvawhqkldsi378ikfif0s210s9r-nixos-system-laptop-25.05.809873.9a094440e02a.drv'...
 activating the configuration...
 setting up /etc...
 reloading user units for felix...
 restarting sysinit-reactivation.target
-the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/r4hfxcqszkcbss10wicccr1hfm5bgpy2-nixos-system-laptop-25.05.809873.9a094440e02a
+the following new units were started: NetworkManager-dispatcher.service, nss-lookup.target, nss-user-lookup.target, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
+Done. The new configuration is /nix/store/kngjbc1bjr2rj7pv67dixdsdp4gy9khj-nixos-system-laptop-25.05.809873.9a094440e02a
