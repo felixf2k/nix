@@ -239,6 +239,7 @@ in
     # otherwise it can coexist but Strongswan will handle the VPN here.
     # libreswan
     strongswan # Add strongswan to your system packages for cli tools
+    gnomeExtensions.tiling-shell
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
