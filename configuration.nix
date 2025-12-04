@@ -242,6 +242,7 @@ in
     tree
     strongswan
     gnomeExtensions.tiling-shell
+    gnomeExtensions.hide-top-bar
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
