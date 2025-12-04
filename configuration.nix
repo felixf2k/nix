@@ -55,6 +55,10 @@ in
     "net.ipv6.conf.all.forwarding" = true;
   };
 
+  boot.kernelParams = [ 
+    "video=DP-6:5120x1440@144"
+  ];
+
   networking =
       let
         # Define MTU and MSS here to be used throughout the networking config.
@@ -163,7 +167,7 @@ in
   };
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -197,6 +201,7 @@ in
       nodejs_24
       jetbrains.webstorm
       steam
+      gnome-tweaks
     ];
   };
 
@@ -232,13 +237,10 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim 
     git
     tree
-    # Remove libreswan if you no longer need it for other purposes,
-    # otherwise it can coexist but Strongswan will handle the VPN here.
-    # libreswan
-    strongswan # Add strongswan to your system packages for cli tools
+    strongswan
     gnomeExtensions.tiling-shell
   ];
 
