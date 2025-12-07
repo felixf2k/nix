@@ -192,7 +192,6 @@ in
       microsoft-edge
       nextcloud-talk-desktop
       obsidian
-      vscode
       discord
       solaar
       gnomeExtensions.solaar-extension
@@ -202,8 +201,23 @@ in
       jetbrains.webstorm
       steam
       gnome-tweaks
+      (vscode-with-extensions.override {
+        vscodeExtensions = with vscode-extensions; [
+          rust-lang.rust-analyzer
+          dbaeumer.vscode-eslint
+          bbenoist.nix
+          esbenp.prettier-vscode
+          yoavbls.pretty-ts-errors
+          supermaven.supermaven
+          svelte.svelte-vscode
+          bradlc.vscode-tailwindcss
+          gruntfuggly.todo-tree
+          redhat.vscode-yaml
+        ];
+      })
     ];
   };
+
 
   # enable docker
   virtualisation.docker.enable = true;
