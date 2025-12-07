@@ -201,6 +201,7 @@ in
       jetbrains.webstorm
       steam
       gnome-tweaks
+      rust-analyzer
       (vscode-with-extensions.override {
         vscodeExtensions = with vscode-extensions; [
           rust-lang.rust-analyzer
