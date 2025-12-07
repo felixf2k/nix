@@ -202,6 +202,8 @@ in
       steam
       gnome-tweaks
       rust-analyzer
+      cargo
+      rustc
       (vscode-with-extensions.override {
         vscodeExtensions = with vscode-extensions; [
           rust-lang.rust-analyzer
