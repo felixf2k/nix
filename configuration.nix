@@ -204,20 +204,21 @@ in
       rust-analyzer
       cargo
       rustc
-      (vscode-with-extensions.override {
-        vscodeExtensions = with vscode-extensions; [
-          rust-lang.rust-analyzer
-          dbaeumer.vscode-eslint
-          bbenoist.nix
-          esbenp.prettier-vscode
-          yoavbls.pretty-ts-errors
-          supermaven.supermaven
-          svelte.svelte-vscode
-          bradlc.vscode-tailwindcss
-          gruntfuggly.todo-tree
-          redhat.vscode-yaml
-        ];
-      })
+      vscode
+      # (vscode-with-extensions.override {
+      #   vscodeExtensions = with vscode-extensions; [
+      #     rust-lang.rust-analyzer
+      #     dbaeumer.vscode-eslint
+      #     bbenoist.nix
+      #     esbenp.prettier-vscode
+      #     yoavbls.pretty-ts-errors
+      #     supermaven.supermaven
+      #     svelte.svelte-vscode
+      #     bradlc.vscode-tailwindcss
+      #     gruntfuggly.todo-tree
+      #     redhat.vscode-yaml
+      #   ];
+      # })
     ];
   };
 
