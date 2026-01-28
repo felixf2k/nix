@@ -211,7 +211,6 @@ in
       bbenoist.nix
       jnoortheen.nix-ide
       rust-lang.rust-analyzer
-      svelte.svelte-vscode
       bradlc.vscode-tailwindcss
       redhat.vscode-yaml
       dbaeumer.vscode-eslint
@@ -251,13 +250,17 @@ in
         version = "1.0.9";
         sha256 = "sha256-5pGDKme46uT1/35WkTGL3n8ecc7wUBkHVId9VpT7c2U=";
       }
-
-      # --- NEW (Needs Hash Verification) ---
       {
         publisher = "google";
         name = "geminicodeassist";
         version = "2.68.0";
         sha256 = "0n6ilac5ky12j5bgc5wspq3vv671vcy8qwy9pf4nrvnnmkmnpyjb"; # Set to empty to trigger the "Hash Mismatch" error
+      }
+      {
+        publisher = "svelte";
+        name = "svelte-vscode";
+        version = "109.12.1";
+        sha256 = "1rjjahf8wp8r43g7nijc4r81xw0shzs03649j10wzb66a4bjvanh";
       }
 ];
   })

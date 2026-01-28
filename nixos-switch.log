@@ -2,133 +2,47 @@ building Nix...
 building the system configuration...
 evaluation warning: The option `services.xserver.xkbVariant' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
 evaluation warning: The option `services.xserver.layout' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
-these 18 derivations will be built:
-  /nix/store/3qpqmynxql78fahiqivwx1pk8d1d4byp-vscode-extension-csstools-postcss-1.0.9.drv
-  /nix/store/45fl2prsba3cbpzgi6vb1vb96pj3an1k-42crunch-vscode-openapi.zip.drv
-  /nix/store/a8p09wa4qafawd8r421igs552swczw6y-vscode-extension-42crunch-vscode-openapi-4.21.0.drv
-  /nix/store/6zl1mzy0qqs8x0b8vmrn3059bv06az9y-google-geminicodeassist.zip.drv
-  /nix/store/g2j0l3xgxvk0ya501bg48qc5pm7jpmm4-vscode-extension-google-geminicodeassist-2.68.0.drv
-  /nix/store/lycxxxsl0mjyz7pk30n0y4ycscwb6n6h-inlang-vs-code-extension.zip.drv
-  /nix/store/k1id6i2qxpkh3n0yn36mdcx7zzy6dbym-vscode-extension-inlang-vs-code-extension-1.10.0.drv
-  /nix/store/ivkw25473ki8s6hya2mmbjkdw3ify9dn-bierner-markdown-mermaid.zip.drv
-  /nix/store/rz1fp9h9r9ii08ca4xnfqgsrjppdcrx8-vscode-extension-bierner-markdown-mermaid-1.21.0.drv
-  /nix/store/wpznssi5zn0vn5v3nk9m4vqln1mh5bqc-vscode-extensions-json.drv
-  /nix/store/04wvgi9dky19qidwn2766d6bjlf4ih97-vscode-extensions.drv
-  /nix/store/mx8fcj57n305hkh2nrbizhfah39kzilh-code-1.103.2-fhsenv-rootfs.drv
-  /nix/store/hsgg0k3hs1asz4aygc1n8w4j1cjlp1rl-code-1.103.2-bwrap.drv
-  /nix/store/ff8c9mxd7zdzgn53537crimmmjz6nd95-code-1.103.2.drv
-  /nix/store/dvvbwg9x82p49bvjbxfwqdrv32zlbw2z-code-with-extensions-1.103.2.drv
-  /nix/store/f10cjrvmg5yapg7vqsj2z49wfpqkbzy8-user-environment.drv
-  /nix/store/39snakg927gq66nf3l9mq8897y8x5yla-etc.drv
-  /nix/store/ygv1fnx4nn424v5fahh0dw4d59cfq4q7-nixos-system-laptop-25.05.809873.9a094440e02a.drv
-this path will be fetched (7.34 MiB download, 44.53 MiB unpacked):
-  /nix/store/xkbzyajnf8h3mm2s48c0f5fh34q29z01-vscode-extension-wix-vscode-import-cost-3.3.0
-copying path '/nix/store/xkbzyajnf8h3mm2s48c0f5fh34q29z01-vscode-extension-wix-vscode-import-cost-3.3.0' from 'https://cache.nixos.org'...
-building '/nix/store/3qpqmynxql78fahiqivwx1pk8d1d4byp-vscode-extension-csstools-postcss-1.0.9.drv'...
-building '/nix/store/mx8fcj57n305hkh2nrbizhfah39kzilh-code-1.103.2-fhsenv-rootfs.drv'...
-building '/nix/store/45fl2prsba3cbpzgi6vb1vb96pj3an1k-42crunch-vscode-openapi.zip.drv'...
-building '/nix/store/ivkw25473ki8s6hya2mmbjkdw3ify9dn-bierner-markdown-mermaid.zip.drv'...
-building '/nix/store/6zl1mzy0qqs8x0b8vmrn3059bv06az9y-google-geminicodeassist.zip.drv'...
-building '/nix/store/lycxxxsl0mjyz7pk30n0y4ycscwb6n6h-inlang-vs-code-extension.zip.drv'...
-Running phase: unpackPhase
-unpacking source archive /nix/store/z5mq3rc3mz00qdd12cs8lyq23y2n71xa-csstools-postcss.zip
-source root is extension
-setting SOURCE_DATE_EPOCH to timestamp 1597710452 of file "extension/README.md"
-Running phase: patchPhase
-Running phase: updateAutotoolsGnuConfigScriptsPhase
-Running phase: configurePhase
-Running phase: buildPhase
-Running phase: installPhase
-Running phase: fixupPhase
-checking for references to /build/ in /nix/store/nb6cyabgf7x9h0fmafz7p8n01cwqhvxh-vscode-extension-csstools-postcss-1.0.9...
-patching script interpreter paths in /nix/store/nb6cyabgf7x9h0fmafz7p8n01cwqhvxh-vscode-extension-csstools-postcss-1.0.9
-structuredAttrs is enabled
+these 8 derivations will be built:
+  /nix/store/ggx12d4nd3xgibgkdh9jrsjpbzrnhq00-svelte-svelte-vscode.zip.drv
+  /nix/store/6hh848pw74ay87cnv7n75ccvmzfyiddx-vscode-extension-svelte-svelte-vscode-109.12.1.drv
+  /nix/store/22g9ir1x2ls5scq58gzv1x79bpk9v932-vscode-extensions-json.drv
+  /nix/store/ffhp1n17rgjpdfm07rh5idsrbqnl0llz-vscode-extensions.drv
+  /nix/store/j0jpg5m6324a64m9gha6byr8w773r9b9-code-with-extensions-1.103.2.drv
+  /nix/store/m56vzhpj7qlh3z9w4wxadlhjqnkq4vif-user-environment.drv
+  /nix/store/y70pw4gdc2lf137fn76bl6i13qyfcyxk-etc.drv
+  /nix/store/ckx28hwczv1mzvbiydswricdjch1wmg4-nixos-system-laptop-25.05.809873.9a094440e02a.drv
+building '/nix/store/ggx12d4nd3xgibgkdh9jrsjpbzrnhq00-svelte-svelte-vscode.zip.drv'...
 
-trying https://42crunch.gallery.vsassets.io/_apis/public/gallery/publisher/42crunch/extension/vscode-openapi/4.21.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
+trying https://svelte.gallery.vsassets.io/_apis/public/gallery/publisher/svelte/extension/svelte-vscode/109.12.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-
-trying https://bierner.gallery.vsassets.io/_apis/public/gallery/publisher/bierner/extension/markdown-mermaid/1.21.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-
-trying https://google.gallery.vsassets.io/_apis/public/gallery/publisher/google/extension/geminicodeassist/2.68.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-
-trying https://inlang.gallery.vsassets.io/_apis/public/gallery/publisher/inlang/extension/vs-code-extension/1.10.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-building '/nix/store/hsgg0k3hs1asz4aygc1n8w4j1cjlp1rl-code-1.103.2-bwrap.drv'...
-100 2591k  100 2591k    0     0  3035k      0 --:--:-- --:--:-- --:--:-- 3034k
-building '/nix/store/a8p09wa4qafawd8r421igs552swczw6y-vscode-extension-42crunch-vscode-openapi-4.21.0.drv'...
-building '/nix/store/ff8c9mxd7zdzgn53537crimmmjz6nd95-code-1.103.2.drv'...
+100 10.1M  100 10.1M    0     0  5127k      0  0:00:02  0:00:02 --:--:-- 5130k
+building '/nix/store/6hh848pw74ay87cnv7n75ccvmzfyiddx-vscode-extension-svelte-svelte-vscode-109.12.1.drv'...
 Running phase: unpackPhase
-unpacking source archive /nix/store/nm6c00wddg00yncm994b7cgs47jrgs5l-42crunch-vscode-openapi.zip
+unpacking source archive /nix/store/vyw72hss36mc8xsb5h2acj993rfns57x-svelte-svelte-vscode.zip
 source root is extension
-setting SOURCE_DATE_EPOCH to timestamp 1705581542 of file "extension/README.md"
+setting SOURCE_DATE_EPOCH to timestamp 1766214494 of file "extension/README.md"
 Running phase: patchPhase
 Running phase: updateAutotoolsGnuConfigScriptsPhase
 Running phase: configurePhase
 Running phase: buildPhase
 Running phase: installPhase
 Running phase: fixupPhase
-checking for references to /build/ in /nix/store/1mxcq8z0ds730gj5pbwpkg0bywbfiwhw-vscode-extension-42crunch-vscode-openapi-4.21.0...
-patching script interpreter paths in /nix/store/1mxcq8z0ds730gj5pbwpkg0bywbfiwhw-vscode-extension-42crunch-vscode-openapi-4.21.0
-100 2240k  100 2240k    0     0  2225k      0  0:00:01  0:00:01 --:--:-- 2227k
-building '/nix/store/k1id6i2qxpkh3n0yn36mdcx7zzy6dbym-vscode-extension-inlang-vs-code-extension-1.10.0.drv'...
-100 2650k  100 2650k    0     0  2013k      0  0:00:01  0:00:01 --:--:-- 2015k
-building '/nix/store/rz1fp9h9r9ii08ca4xnfqgsrjppdcrx8-vscode-extension-bierner-markdown-mermaid-1.21.0.drv'...
-Running phase: unpackPhase
-unpacking source archive /nix/store/5d3ibqd9q8lj7g3nxw9kf8i2bbs3dwym-inlang-vs-code-extension.zip
-source root is extension
-setting SOURCE_DATE_EPOCH to timestamp 1696492600 of file "extension/README.md"
-Running phase: patchPhase
-Running phase: updateAutotoolsGnuConfigScriptsPhase
-Running phase: configurePhase
-Running phase: buildPhase
-Running phase: installPhase
-Running phase: unpackPhase
-unpacking source archive /nix/store/zxg3a154zxjvvi8psgrgn9z6zyaz7j4b-bierner-markdown-mermaid.zip
-Running phase: fixupPhase
-checking for references to /build/ in /nix/store/a3xw9sf9yxj1gvbs5rgl1i9gr2dyybq9-vscode-extension-inlang-vs-code-extension-1.10.0...
-patching script interpreter paths in /nix/store/a3xw9sf9yxj1gvbs5rgl1i9gr2dyybq9-vscode-extension-inlang-vs-code-extension-1.10.0
-source root is extension
-setting SOURCE_DATE_EPOCH to timestamp 1701874952 of file "extension/README.md"
-Running phase: patchPhase
-Running phase: updateAutotoolsGnuConfigScriptsPhase
-Running phase: configurePhase
-Running phase: buildPhase
-Running phase: installPhase
-Running phase: fixupPhase
-checking for references to /build/ in /nix/store/21i0ypiqnyx1h50v5bsnczz9xfigck2h-vscode-extension-bierner-markdown-mermaid-1.21.0...
-patching script interpreter paths in /nix/store/21i0ypiqnyx1h50v5bsnczz9xfigck2h-vscode-extension-bierner-markdown-mermaid-1.21.0
-100  214M  100  214M    0     0  7689k      0  0:00:28  0:00:28 --:--:-- 7819k
-building '/nix/store/g2j0l3xgxvk0ya501bg48qc5pm7jpmm4-vscode-extension-google-geminicodeassist-2.68.0.drv'...
-Running phase: unpackPhase
-unpacking source archive /nix/store/4h6g8v3jlzyh1b75n1pzykfnpiyxcn1d-google-geminicodeassist.zip
-source root is extension
-setting SOURCE_DATE_EPOCH to timestamp 1769124824 of file "extension/images/walkthrough/apigee_create_proxies/apigee-create-proxies-1.svg"
-Running phase: patchPhase
-Running phase: updateAutotoolsGnuConfigScriptsPhase
-Running phase: configurePhase
-Running phase: buildPhase
-Running phase: installPhase
-Running phase: fixupPhase
-checking for references to /build/ in /nix/store/6vly7r5ns2hvc5d9gw0r93bykgpiam6r-vscode-extension-google-geminicodeassist-2.68.0...
-patching script interpreter paths in /nix/store/6vly7r5ns2hvc5d9gw0r93bykgpiam6r-vscode-extension-google-geminicodeassist-2.68.0
-building '/nix/store/wpznssi5zn0vn5v3nk9m4vqln1mh5bqc-vscode-extensions-json.drv'...
-building '/nix/store/04wvgi9dky19qidwn2766d6bjlf4ih97-vscode-extensions.drv'...
+checking for references to /build/ in /nix/store/79v737yh6kf82gm7znbf3a39l8nlhw1p-vscode-extension-svelte-svelte-vscode-109.12.1...
+patching script interpreter paths in /nix/store/79v737yh6kf82gm7znbf3a39l8nlhw1p-vscode-extension-svelte-svelte-vscode-109.12.1
+/nix/store/79v737yh6kf82gm7znbf3a39l8nlhw1p-vscode-extension-svelte-svelte-vscode-109.12.1/share/vscode/extensions/svelte.svelte-vscode/node_modules/vscode-languageclient/lib/node/terminateProcess.sh: interpreter directive changed from "#!/bin/bash" to "/nix/store/cfqbabpc7xwg8akbcchqbq3cai6qq2vs-bash-5.2p37/bin/bash"
+building '/nix/store/22g9ir1x2ls5scq58gzv1x79bpk9v932-vscode-extensions-json.drv'...
+building '/nix/store/ffhp1n17rgjpdfm07rh5idsrbqnl0llz-vscode-extensions.drv'...
 created 18 symlinks in user environment
-building '/nix/store/dvvbwg9x82p49bvjbxfwqdrv32zlbw2z-code-with-extensions-1.103.2.drv'...
-building '/nix/store/f10cjrvmg5yapg7vqsj2z49wfpqkbzy8-user-environment.drv'...
+building '/nix/store/j0jpg5m6324a64m9gha6byr8w773r9b9-code-with-extensions-1.103.2.drv'...
+building '/nix/store/m56vzhpj7qlh3z9w4wxadlhjqnkq4vif-user-environment.drv'...
 created 857 symlinks in user environment
 gtk-update-icon-cache: Cache file created successfully.
-building '/nix/store/39snakg927gq66nf3l9mq8897y8x5yla-etc.drv'...
-building '/nix/store/ygv1fnx4nn424v5fahh0dw4d59cfq4q7-nixos-system-laptop-25.05.809873.9a094440e02a.drv'...
+building '/nix/store/y70pw4gdc2lf137fn76bl6i13qyfcyxk-etc.drv'...
+building '/nix/store/ckx28hwczv1mzvbiydswricdjch1wmg4-nixos-system-laptop-25.05.809873.9a094440e02a.drv'...
 activating the configuration...
 setting up /etc...
 reloading user units for felix...
 restarting sysinit-reactivation.target
 the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/fg35qac07dmwkxlcjq31mwsv9d3jmdiw-nixos-system-laptop-25.05.809873.9a094440e02a
+Done. The new configuration is /nix/store/l9qrspn5jmmsb5dhmnqgzg5hkpzgx4pi-nixos-system-laptop-25.05.809873.9a094440e02a
