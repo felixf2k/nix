@@ -222,6 +222,10 @@ in
     ];
   };
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc.lib
+  ];
 
   # enable docker
   virtualisation.docker.enable = true;
