@@ -204,66 +204,7 @@ in
       rust-analyzer
       cargo
       rustc
-      (pkgs.vscode-with-extensions.override {
-    vscode = pkgs.vscode-fhs;
-    vscodeExtensions = with pkgs.vscode-extensions; [
-      # --- Proven to exist in Nixpkgs ---
-      bbenoist.nix
-      jnoortheen.nix-ide
-      rust-lang.rust-analyzer
-      bradlc.vscode-tailwindcss
-      redhat.vscode-yaml
-      dbaeumer.vscode-eslint
-      esbenp.prettier-vscode
-      gruntfuggly.todo-tree
-      mechatroner.rainbow-csv
-      yoavbls.pretty-ts-errors
-    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-     # --- VERIFIED & WORKING ---
-      {
-        publisher = "inlang";
-        name = "vs-code-extension";
-        version = "1.10.0";
-        sha256 = "11phhnghvz10qhjvzqfj6i8fpyzbjzach1wi5xjbaxzly0plh9dy";
-      }
-      {
-        publisher = "bierner";
-        name = "markdown-mermaid";
-        version = "1.21.0";
-        sha256 = "1ix0l8h1g32yn65nsc1sja7ddh42y5wdxbr7w753zdqyx04rs8v3";
-      }
-      {
-        publisher = "42crunch";
-        name = "vscode-openapi";
-        version = "4.21.0";
-        sha256 = "0shba85jp86bkicy1ba0glkkkhcmswxd39ypbr98rcwlq6np3vgc";
-      }
-      {
-        publisher = "wix";
-        name = "vscode-import-cost";
-        version = "3.3.0";
-        sha256 = "0wl8vl8n0avd6nbfmis0lnlqlyh4yp3cca6kvjzgw5xxdc5bl38r";
-      }
-      {
-        publisher = "csstools";
-        name = "postcss";
-        version = "1.0.9";
-        sha256 = "sha256-5pGDKme46uT1/35WkTGL3n8ecc7wUBkHVId9VpT7c2U=";
-      }
-      {
-        publisher = "google";
-        name = "geminicodeassist";
-        version = "2.68.0";
-        sha256 = "0n6ilac5ky12j5bgc5wspq3vv671vcy8qwy9pf4nrvnnmkmnpyjb"; # Set to empty to trigger the "Hash Mismatch" error
-      }
-      {
-        publisher = "svelte";
-        name = "svelte-vscode";
-        version = "109.12.1";
-        sha256 = "1rjjahf8wp8r43g7nijc4r81xw0shzs03649j10wzb66a4bjvanh";
-      }
-];
-  })
+      vscode
     ];
   };
 

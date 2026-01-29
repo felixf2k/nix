@@ -2,47 +2,9 @@ building Nix...
 building the system configuration...
 evaluation warning: The option `services.xserver.xkbVariant' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
 evaluation warning: The option `services.xserver.layout' defined in `/home/felix/Documents/repos/nix/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
-these 8 derivations will be built:
-  /nix/store/ggx12d4nd3xgibgkdh9jrsjpbzrnhq00-svelte-svelte-vscode.zip.drv
-  /nix/store/6hh848pw74ay87cnv7n75ccvmzfyiddx-vscode-extension-svelte-svelte-vscode-109.12.1.drv
-  /nix/store/22g9ir1x2ls5scq58gzv1x79bpk9v932-vscode-extensions-json.drv
-  /nix/store/ffhp1n17rgjpdfm07rh5idsrbqnl0llz-vscode-extensions.drv
-  /nix/store/j0jpg5m6324a64m9gha6byr8w773r9b9-code-with-extensions-1.103.2.drv
-  /nix/store/m56vzhpj7qlh3z9w4wxadlhjqnkq4vif-user-environment.drv
-  /nix/store/y70pw4gdc2lf137fn76bl6i13qyfcyxk-etc.drv
-  /nix/store/ckx28hwczv1mzvbiydswricdjch1wmg4-nixos-system-laptop-25.05.809873.9a094440e02a.drv
-building '/nix/store/ggx12d4nd3xgibgkdh9jrsjpbzrnhq00-svelte-svelte-vscode.zip.drv'...
-
-trying https://svelte.gallery.vsassets.io/_apis/public/gallery/publisher/svelte/extension/svelte-vscode/109.12.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100 10.1M  100 10.1M    0     0  5127k      0  0:00:02  0:00:02 --:--:-- 5130k
-building '/nix/store/6hh848pw74ay87cnv7n75ccvmzfyiddx-vscode-extension-svelte-svelte-vscode-109.12.1.drv'...
-Running phase: unpackPhase
-unpacking source archive /nix/store/vyw72hss36mc8xsb5h2acj993rfns57x-svelte-svelte-vscode.zip
-source root is extension
-setting SOURCE_DATE_EPOCH to timestamp 1766214494 of file "extension/README.md"
-Running phase: patchPhase
-Running phase: updateAutotoolsGnuConfigScriptsPhase
-Running phase: configurePhase
-Running phase: buildPhase
-Running phase: installPhase
-Running phase: fixupPhase
-checking for references to /build/ in /nix/store/79v737yh6kf82gm7znbf3a39l8nlhw1p-vscode-extension-svelte-svelte-vscode-109.12.1...
-patching script interpreter paths in /nix/store/79v737yh6kf82gm7znbf3a39l8nlhw1p-vscode-extension-svelte-svelte-vscode-109.12.1
-/nix/store/79v737yh6kf82gm7znbf3a39l8nlhw1p-vscode-extension-svelte-svelte-vscode-109.12.1/share/vscode/extensions/svelte.svelte-vscode/node_modules/vscode-languageclient/lib/node/terminateProcess.sh: interpreter directive changed from "#!/bin/bash" to "/nix/store/cfqbabpc7xwg8akbcchqbq3cai6qq2vs-bash-5.2p37/bin/bash"
-building '/nix/store/22g9ir1x2ls5scq58gzv1x79bpk9v932-vscode-extensions-json.drv'...
-building '/nix/store/ffhp1n17rgjpdfm07rh5idsrbqnl0llz-vscode-extensions.drv'...
-created 18 symlinks in user environment
-building '/nix/store/j0jpg5m6324a64m9gha6byr8w773r9b9-code-with-extensions-1.103.2.drv'...
-building '/nix/store/m56vzhpj7qlh3z9w4wxadlhjqnkq4vif-user-environment.drv'...
-created 857 symlinks in user environment
-gtk-update-icon-cache: Cache file created successfully.
-building '/nix/store/y70pw4gdc2lf137fn76bl6i13qyfcyxk-etc.drv'...
-building '/nix/store/ckx28hwczv1mzvbiydswricdjch1wmg4-nixos-system-laptop-25.05.809873.9a094440e02a.drv'...
 activating the configuration...
 setting up /etc...
 reloading user units for felix...
 restarting sysinit-reactivation.target
 the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/l9qrspn5jmmsb5dhmnqgzg5hkpzgx4pi-nixos-system-laptop-25.05.809873.9a094440e02a
+Done. The new configuration is /nix/store/3gnyma2w88x9j2j6fndjk2alrh13sm0f-nixos-system-laptop-25.05.809873.9a094440e02a
