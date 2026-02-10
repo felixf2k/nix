@@ -1,9 +1,9 @@
 set -e
-pushd ~/Documents/repos/nix
+pushd /etc/nixos/
 vim configuration.nix
 git diff -U0 *.nix
 echo "NixOS Rebuilding..."
-sudo nixos-rebuild switch -I nixos-config=configuration.nix &>nixos-switch.log || (
+sudo nixos-rebuild switch &>nixos-switch.log || (
  cat nixos-switch.log | grep --color error && false)
 gen=$(nixos-rebuild list-generations | grep current)
 git add configuration.nix

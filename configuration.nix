@@ -39,6 +39,28 @@ let
         ;;
     esac
   '';
+
+  
+  favicon = ./ci/favicon.png;
+  faviconSvg = ./ci/favicon.svg; 
+  letterpress = ./ci/letterpress.svg;
+
+  elenchCode = (pkgs.vscode.override {}).overrideAttrs (oldAttrs: {
+    postFixup = (oldAttrs.postFixup or "") + ''
+      # 1. Ersetze das Icon für das Betriebssystem (Taskleiste/Launcher)
+      rm -f $out/lib/vscode/resources/app/resources/linux/code.png
+      cp ${favicon} $out/lib/vscode/resources/app/resources/linux/code.png
+      
+      mkdir -p $out/share/icons/hicolor/512x512/apps
+      cp -f ${favicon} $out/share/icons/hicolor/512x512/apps/vscode.png
+
+      # 2. Ersetze das interne SVG (Das, was du gefunden hast!)
+      # Wir nutzen 'find', um die Datei "code-icon.svg" überall zu finden und zu ersetzen.
+      # Das ist robuster als feste Pfade, falls sich die Ordnerstruktur ändert.
+      find $out -name "code-icon.svg" -exec cp -f ${faviconSvg} {} \;
+      find $out -name "letterpress-dark.svg" -exec cp -f ${letterpress} {} \;
+    '';
+  });
 in
 {
   imports =
@@ -124,6 +146,29 @@ in
     };
   };
   environment.etc."ipsec.secrets".source = lib.mkForce ./ipsec.secrets;
+  
+  services.syncthing = {
+    enable = true;
+    user = "felix";
+    dataDir = "/home/felix/Documents";
+    configDir = "/home/felix/.config/syncthing";
+    
+    settings = {
+      devices = {
+        "server" = { 
+          id = "AUDSLJ6-NVJL7P2-NG7WFD2-DRIZR3Y-IWM75PE-GHLAATF-TVBB5IX-ATNEQQZ";
+          addresses = [ "tcp://192.168.0.10:22000" ];
+        };
+      };
+      folders = {
+        "share" = {
+          id = "mtqzv-hufpi"; # Matching the ID from your image
+          path = "/home/felix/share"; # Local path on your laptop
+          devices = [ "server" ];
+        };
+      };
+    };
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -194,7 +239,6 @@ in
       obsidian
       discord
       solaar
-      gnomeExtensions.solaar-extension
       libreoffice
       pnpm
       nodejs_24
@@ -204,7 +248,7 @@ in
       rust-analyzer
       cargo
       rustc
-      vscode
+      elenchCode
     ];
   };
 
@@ -251,6 +295,8 @@ in
     strongswan
     gnomeExtensions.tiling-shell
     gnomeExtensions.hide-top-bar
+    gnomeExtensions.solaar-extension
+    # gnomeExtensions.custom-accent-colors
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
