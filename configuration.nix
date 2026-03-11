@@ -214,12 +214,20 @@ in
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
+services.pipewire = {
+  enable = true;
+  alsa.enable = true;
+  alsa.support32Bit = true;
+  pulse.enable = true;
+  wireplumber.extraConfig."10-bluez" = {
+    "monitor.bluez.properties" = {
+      "bluez5.enable-sbc-xq" = true;
+      "bluez5.enable-msbc" = true;
+      "bluez5.enable-hw-volume" = true;
+      "bluez5.roles" = [ "hsp_hs" "hfp_ag" "hfp_hf" "a2dp_sink" "a2dp_source" ];
+    };
   };
+};
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.felix = {
@@ -229,12 +237,10 @@ in
     packages = with pkgs; [
       thunderbird
       chromium
-      microsoft-edge
       keepassxc
       spotify
       gimp
       lens
-      microsoft-edge
       nextcloud-talk-desktop
       obsidian
       discord
@@ -249,6 +255,7 @@ in
       cargo
       rustc
       elenchCode
+      element-desktop
     ];
   };
 
@@ -296,6 +303,7 @@ in
     gnomeExtensions.tiling-shell
     gnomeExtensions.hide-top-bar
     gnomeExtensions.solaar-extension
+    # gnomeExtensions.auto-accent-colour
     # gnomeExtensions.custom-accent-colors
   ];
 
