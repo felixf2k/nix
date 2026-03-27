@@ -298,6 +298,8 @@ services.pipewire = {
   environment.systemPackages = with pkgs; [
     vim 
     git
+    tmux
+    gnupg
     tree
     strongswan
     gnomeExtensions.tiling-shell
